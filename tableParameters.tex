@@ -1,0 +1,116 @@
+\begin{table*}[htb]
+	\begin{center}
+		\begin{tabular}{rllll}
+			\toprule
+			Symbol		&	\multicolumn{1}{c}{Meaning} &
+				Reference	& Range & units
+		\\
+		\midrule
+			$M_S(0)$
+				& Initial number of susceptible
+		\\
+			$M_1(0)$, $M_2(0)$
+				& and infected mosquitoes.
+		\\
+			$b$
+			& Biting rate
+			&\cite{YasunoM1990}
+			&[1.48 , 4.77] & $\si{meals \per day}$ 
+		\\
+			$\Lambda_S$
+				& Human birth rate
+				&
+				& 
+					$\mu_H \cdot (N_H - N_{S_{-1}})$
+				& $\si{day^{-1}}$
+		\\
+			$\Lambda_{S_{-1}}$
+				& Human birth rate
+				&
+				& 
+					$\mu_H \cdot N_{S_{-1}}$
+				& $\si{day^{-1}}$
+		\\
+			$\Lambda_M$
+			& Vector birth rate
+			&
+			& $\mu_M \cdot N_M$
+			& $\si{day^{-1}}$
+		\\
+			$\mu_M$
+			& vector mortality rate
+			& \cite{YANG2009}
+      & [\num{0.036}, \num{0.109}] 
+      & $\si{day^{-1}}$
+    \\
+			$\mu_H$
+			& Human mortality
+			&---
+			& \num{3.9139E-05} 
+			& $\si{day^{-1}}$
+		\\
+			$N_H$   
+			& Sampler Population size  
+			&---
+			&\num{40000}
+			&---	
+		\\
+			$\beta_H$ 
+			&	Human infection 
+			\\
+      & probability  by vectors
+			& \cite{Feng1997a} 
+			& (\num{0}, \num{0.05}] 
+			& ---
+		\\
+			$\beta_M$
+			& Vector infection 
+			\\
+      & probability by humans
+			& \cite{Feng1997a}& (\num{0}, \num{0.05}] & ---
+		\\
+			$\alpha_{c}$ 
+			& Mean recover rate 
+			\\
+      & from Classic Dengue
+			&\cite{Pinho2010}
+			& [\num{0.083},\num{0.25}] & $\si{day^{-1}}$
+		\\
+			$\alpha_{h}$	& Mean recover rate
+			& \cite{Pinho2010} 
+			& [\num{0.083},\num{0.25}] 
+			& $\si{day^{-1}}$
+		\\
+			& from Hemorrhagic Dengue
+		\\
+			$\sigma$
+			& Susceptibility to serotype \ac{DENV-2}.
+			& \cite{Feng1997a}
+      \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\caption{Parameter description}
+	\label{tbl:parameter_description}
+\end{table*}
+\input{tbl_parameters_values}
+\todo[inline]{Discuss above parameters units. Weeks or days}
+%
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.7\linewidth, keepaspectratio]%
+	{fitting_DF_DHF}
+	\caption{DF and DHF numerical solutions versus
+		Dengue data from 2010 Hermosillo outbreak. Python code and
+    data in 
+    \href{github}{https://github.com/SaulDiazInfante/Two-strains-dengue-model-data-%
+        fitting/tree/master/StochasticSearchPySimplifiedModel}
+	}\label{fig:fitting}
+\end{figure*}
+
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.7\linewidth, keepaspectratio]%
+	{populations_grid.png}
+	\caption{Evolutions of each stage.}\label{fig:population_grid}
+\end{figure*}

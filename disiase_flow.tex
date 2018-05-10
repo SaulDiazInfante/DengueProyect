@@ -1,0 +1,85 @@
+\documentclass[tikz]{standalone}
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+\usepackage[utf8]{inputenc}
+\usepackage{verbatim}
+\begin{document}
+%
+  \tikzstyle{stateM}=[draw, draw=orange!60,fill=orange!40, minimum size=3em]
+  \tikzstyle{state}=[draw, draw=blue!60,fill=blue!20, minimum size=3em]
+  \tikzstyle{state_m1}=[draw, draw=bluee!60,fill=blue!20, minimum size=3em]
+  \tikzstyle{state_m1h}=[draw, draw=red!60,fill=red!40, minimum size=3em]
+  \tikzstyle{init} = [pin edge={to-,thin,black}]
+  \tikzstyle{label_s} = [inner sep=2pt, align=left, sloped]
+  \begin{tikzpicture}[
+      every label/.append style = {font=\tiny}. auto,>=latex', thick
+    ]
+    \node (MS) at (0, 3) [stateM] {$M_S$};
+    \node (MS_in) at (-1.5, 3) [coordinate]{L};
+    \node (MS_out) at (1.5,4.5) [coordinate]{muMS};
+    %
+    \node (MI1) at (3, 3) [stateM] {$M_{1}$};
+    \node (MI1_out) at (4.5,4.5) [coordinate]{muMI1};
+    %
+    \node (MI2) at (6, 3) [stateM] {$M_{2}$};
+    \node (MI2_out) at (7.5,4.5) [coordinate]{muMI2};
+    %
+    \node (S) at (0, -1) [circle, state] {$S$};
+    \node (S_in) at (-1.5, -1) [coordinate]{Ls};
+    \node (S_out) at (1.75, 1) [coordinate]{muS};
+    %
+    \node (I1) at (3, -1) [circle, state] {$I_1}$};
+    \node (I1_out) at (4.75, 1.0) [coordinate]{muI1};
+
+    \node (I2) at (6, -1) [circle, state] {$I_2}$};
+    \node (I2_out) at (7.75, 1.0) [coordinate]{muI2};
+    %
+    \node (Sm1) at (0, -5) [circle, state_m1] {$S_{-1}$};
+    \node (Sm1_in) at (-1.5, -5) [coordinate] {Lsm1};
+    \node (Sm1_out) at (1.75, -3.0) [coordinate]{muS};
+    %
+    \node (Ym1c) at (3, -5) [circle, state_m1] {$Y_{-1}}^{[c]}$};
+    \node (Ym1c_out) at (4.75, -3.0) [coordinate]{muYm1c};
+    %
+    \node (Ym1h) at (6, -5) [circle, state_m1h] {$Y_{-1}^{[h]}}$};
+    \node (Ym1h_out) at (7.75, -3.0) [coordinate]{muYm1h};
+
+
+    % Vector cicle
+    \path[->] (MS_in) edge node[near start, label_s, above] {$\Lambda_M$} (MS);
+    \path[->] (MS) edge node[label_s, above] {$\mu_M M_s$} (MS_out);
+    \path[->] (MS) edge node[label_s, above] {$A_{I_1} M_s$} (MI1);
+    \path[->, draw] (MS) -- ++ (0,-1) -| node[near start, below, rotate=0] %
+    {$(A_{I_2} + A_{Y_{-1}^{[c]}} + A_{Y_{-1}^{[h]}}) M_s$} (MI2);%
+    %
+    \path[->] (MI1) edge node[label_s, above] {$\mu_M M_{1}$} (MI1_out);
+    \path[->] (MI2) edge node[label_s, above] {$\mu_M M_{2}$} (MI2_out);
+
+    % Human cicle
+    \path[->] (S_in) edge node[near start, above] {$\Lambda_S$} (S);
+    \path[->] (S) edge node[above]{$B_{M_1} S$} (I1);
+    \path[->] (S) edge node[label_s, above] {$\mu_H S$} (S_out);
+    \path[->, draw] (S) -- ++ (0,-1) -| node[near start, below, rotate=0]
+    {$B_{M_2} S$} (I2);
+
+    % Human cross inmunity cicle
+
+    \path[->] (Sm1_in) edge node[above] {$\Lambda_{S_{-1}}$} (Sm1);
+    \path[->] (Sm1) edge node[above,label_s]{$\theta \sigma B_{M_1} S_{-1}$} (Ym1c);
+    \path[->] (Sm1) edge node[label_s, above] {$\mu_H S$} (Sm1_out);
+    \path[->, draw] (Sm1) -- ++ (0,-1) -| node[near start, below, rotate=0]
+    {$(1-\theta) \sigma B_{M_2} S_{-1}$} (Ym1h);
+    %
+    \path[->] (I1) edge node[label_s, above]
+      {$(\alpha_c + \mu_H) I_1$} (I1_out);
+    \path[->] (I2) edge node[label_s, above]
+      {$(\alpha_c + \mu_H) I_2$} (I2_out);
+%
+%
+    \path[->] (Ym1c) edge node[label_s, above]
+      {$(\alpha_c + \mu_H) Y_{-1}^{[c]}$} (Ym1c_out);
+    \path[->] (Ym1h) edge node[label_s, above]
+      {$(\alpha_h + \mu_H) Y_{-1}^{[h]}$} (Ym1h_out);
+  \end{tikzpicture}
+\end{document}

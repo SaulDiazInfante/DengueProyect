@@ -1,0 +1,50 @@
+\begin{equation}
+	\begin{aligned}
+		\dot{M}_s &= \Lambda_M - (A_{I_1} + A_{I_2} + A_{Y_{-1}}) M_s -
+			\mu_M M_s
+		\\
+		\dot{M}_1 &= A_{I_1} M_s -\mu_M M_s
+		\\
+		\dot{M}_2 &=(A_{I_2} + A_{Y_{-1h}}) M_s - \mu_M M_2
+		\\
+		\dot{S} &= -(B_1 + B_2)  ~ S
+		\\
+		\dot{I}_1 &= B_1  S - \alpha_c I_1
+		\\
+		\dot{I}_2 &= B_2  S - \alpha_c I_2
+		\\
+		\dot{S}_{-1} &= - \sigma B_2 S_{-1}
+		\\
+		\dot{Y}_{-1 c} &= (1 - \theta) \sigma B_2 S_{-1} - \alpha_c  Y_{-1c}
+		\\
+        \dot{Y}_{-1 h} &=  \theta \sigma B_2 S_{-1} - \alpha_h  Y_{-1h}
+        \\
+		\dot{R} & =
+			\alpha_c( I_1 + I_2 + Y_{-1 c}) + \alpha_h Y_{-1 h}
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+	\begin{aligned}
+		A_{I_1} &:= \frac{\beta_M b}{N_H} I_1, \qquad
+		A_{I_2} := \frac{\beta_M b}{N_H} I_2, \qquad
+		A_{Y_1} := \frac{\beta_M b}{N_H} Y_{-1}, \qquad
+		\\
+		B_{M_1} &:= \frac{\beta_H b}{N_H} M_1 \qquad 
+		B_{M_1} := \frac{\beta_H b}{N_H} M_2
+	\end{aligned}
+\end{equation}
+
+\begin{equation}
+ \begin{aligned}
+	 \mathcal{R}_0 ^2 &=
+	 	\frac{\beta_M \beta_H b^2 \Lambda_M }{N_H^2 \mu_M^2} 
+        \left(
+			\frac{S(0)}{\alpha_c}
+            +
+            \frac{(1 - \theta) \sigma S_{-1}(0)}{\alpha_c}
+            +
+            \frac{\theta \sigma S_{-1}(0)}{\alpha_h}
+        \right)
+	\end{aligned}
+\end{equation}

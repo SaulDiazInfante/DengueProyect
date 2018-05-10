@@ -1,0 +1,102 @@
+\documentclass[5p, authoryear, final, sort&compress, times]{elsarticle}
+\usepackage[english]{babel}
+\usepackage[pagebackref=true]{hyperref}
+\usepackage{doi}
+\usepackage{amsmath, amssymb}
+\usepackage{mathtools, cuted}
+\usepackage{breqn}
+\usepackage{bbold}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\usepackage{siunitx}
+%\usepackage[labelfont=bf,textfont={sl,bf},lofdepth,lotdepth]{subfig}
+\usepackage{xspace}
+\usepackage{color}
+\usepackage{proba}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{cleveref}
+\usepackage{paralist}
+%\usepackage[disable]{todonotes}
+\usepackage[textwidth=1in, textsize=tiny]{todonotes}
+\usepackage{bigints}
+\usepackage[title,titletoc,toc]{appendix}
+\usepackage{siunitx}
+\usepackage{acro}
+\input{setup}
+\geometry{verbose,
+lmargin=.8in,
+rmargin=.8in
+}
+\newcommand{\tinytodo}[2][]
+{\todo[caption={#2}, size=\tiny, 
+#1]{\renewcommand{\baselinestretch}{0.5}\selectfont#2\par}}
+\begin{document}
+	\begin{frontmatter}
+		\input{frontmater}
+	\end{frontmatter}
+	\today
+    \section{Introduction} \label{intro}
+		State the objectives of the work and provide an adequate 
+		background, avoiding a detailed literature survey or a 
+		summary of the results.
+
+		\paragraph{Objectives}
+        Our objective is to explain the dengue hemorrhagic outbreak that 
+     occurred in the city of Hermosillo, Sonora in2010.
+    %
+    \paragraph{Severity}
+    \ac{DCF} \ac{DHF} description.
+    \paragraph{ADE hypothesis}
+     sequence and
+     \ac{DENV-1}, \ac{DENV-2}
+     reinfection as cause of hemorrhagic.
+		\paragraph{Background}
+        
+	\section{Material and methods}
+		Provide sufficient detail to allow the work to be 
+		reproduced, with details of supplier and catalogue 
+		number when appropriate. Methods already published 
+		should be indicated by a reference: only relevant 
+		modifications should be described.
+		\subsection{Data}
+			\paragraph{Data description (Pablo)}
+           	\input{data_description.tex} % Pablo
+			\paragraph{Socioeconomic description: 
+            	homogeneity of regarding initial
+                grow geographic area (Ana-Lucia)}
+        \input{socioeconomic_homogenety.tex} % Ana-Lucia
+		\subsection*{Model}
+			\input{model_introduction.tex}
+      \input{main_hypothesis.tex} % Daniel
+			\input{twoStrainsModel.tex}
+			\input{tableParameters.tex}
+		\subsection{$R_0$ estimation (Montoya)}
+			\input{data_analysis.tex} % Montoya
+            \input{estimation.tex}    % Montoya
+	\section{Results}
+		Results should be clear and concise.
+		\paragraph{Modeling Results (Saúl-Daniel)}
+\paragraph{Data analysis (Saúl-Montoya)}
+		\paragraph{$R_0$ and parameter inference (Montoya)}
+
+	\section{Discussion}
+		This should explore the significance of the results of 
+    the work, not repeat them. A combined results and 
+    Discussion section is often appropriate. Avoid extensive 
+    citations and discussion of published literature.
+
+    In our results we obtained $R_{0c}>1$ and  $R_{0h}<1$. This means that for this outbreak, the presence of DHF cases, cannot trigger on its own new DHF cases and in general, $R_{0h}<1$ would imply an exponential decay on the number of infected individuals. However, the small DHF outbreak arises despite the value of $R_{0h}$ as there is an increase in infected mosquitoes of the serotype 2 due to the presence of the $S$ individuals, which initially is close to $N_S$. Therefore, DHF dynamics is a consequence of the intensity of the outbreak of DF, given by serotype 2. 
+    
+    
+    
+	\section{Conclusions}
+	The main conclusions of the study may be presented in a 
+    short Conclusions section, which may stand alone or form 
+    a subsection of a Discussion or Results and Discussion 
+    section.
+	\bibliographystyle{elsarticle-harv}
+	\bibliography{Epidemiology-TrabajoConDaniel}
+\end{document}

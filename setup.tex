@@ -1,0 +1,59 @@
+\oddsidemargin=1cm
+\textwidth=14.5cm
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newtheorem{dfn}{Definition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{pro}{Proposition}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{consequence}{CONSEQUENCE}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{\bf Example}[section]
+\newtheorem{proof}{\bf Proof}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newproof{pf}{Proof}
+\newproof{Proof}{Proof}
+\providecommand*{\lemautorefname}{Lemma}
+\providecommand*{\thmautorefname}{Theorem}
+\providecommand*{\assumptionautorefname}{Assumption}
+
+\newcommand{\fin}{\vrule height3pt width3pt depth2pt}
+\newcommand{\normL}[1]{\left[\mathbb{E}\left|#1\right|^2\right]^{1/2}}
+\newcommand{\ms}[1]{\mathbb{E}\left|#1\right|^2}
+\newcommand{\mep}[1]{\mathbb{E}|#1|^p}
+\newcommand{\m}[1]{\mathbb{E}#1}
+\newcommand{\Prob}[1]{\mathbb{P}\left[#1\right]}
+\newcommand{\meanp}[2]{\mathbb{E}\left|#1\right|^{#2}}
+\newcommand{\condexp}[2]{\mathbb{E}\left[#1|#2\right]}
+\newcommand{\lftrght}[3]{\left#2 #1\right #3}\DeclareMathOperator{\tr}{tr}
+\newcommand{\innerprod}[2]{\left\langle#1, #2\right\rangle}
+\newcommand*{\eg}{e.g.,\xspace}
+\newcommand*{\ie}{i.e.,\xspace}
+%\newcommand*{\todo}[1]{\textcolor{BrickRed}{#1}\\}
+\newcommand{\crefrangeconjunction}{--}
+\crefrangeformat{equation}{(#3#1#4)--(#5#2#6)}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator*{\as}{a.s.}
+%
+\DeclareAcronym{DENV-1}{
+	short = DENV-1 ,
+	long = Dengue Virus Serotype 1
+}
+\DeclareAcronym{DENV-2}{
+	short = DENV-2 ,
+	long = Dengue Virus Serotype 2
+}
+%
+\DeclareAcronym{ADE}{
+	short = ADE,
+	long = Antibody Dependent infection Enhancement
+}
+\DeclareAcronym{DCF}{
+	short = DCF ,
+	long = Dengue Classic Fever
+}
+\DeclareAcronym{DHF}{
+	short = DHF ,
+	long = Dengue Hemorrhagic Fever
+}

@@ -1,0 +1,428 @@
+This is the version to include data analysis.
+New big version.
+%
+%
+\begin{table}[htb]
+	\begin{center}
+		\begin{tabular}{cllcl}
+			\toprule
+				Symbol
+				&\multicolumn{1}{c}{Meaning} 
+				&Reference
+				& Range 
+				& Units
+			\\
+			\midrule
+				$b$
+				& Biting rate
+				&\cite{YasunoM1990}
+				&[1.48 , 4.77] 
+				&$\si{meals \per day}$ 
+			\\
+				$\Lambda_H$
+				& Human birth rate
+				&
+				& $\mu_H \cdot N_H$
+				& $\si{day^{-1}}$
+			\\
+				$\Lambda_V$	
+				& Vector birth rate
+				&
+				& $\mu_V \cdot N_V$
+				&$\si{day^{-1}}$
+			\\
+				$\mu_M$
+				&	vector mortality rate
+				&\cite{Muir1998,YANG2009} 
+				& [\num{0.036}, \num{0.109}] 
+				& $\si{day^{-1}}$
+			\\
+				$\mu_H$
+				& Human mortality
+				& ---------
+				&\num{3.9139E-05} 
+				&$\si{day^{-1}}$
+			\\
+				$N_H$
+				& Whole human population
+				& ---------
+				&\num{700000}
+				& ---------
+			\\
+				$\gamma^{-1}$
+				& Average time which a
+				&
+				&
+				&
+			\\
+				&mosquito acquires a
+				& ---------
+				& ---------
+				& $\si{day}$
+			\\
+				& high virus load
+				&
+				&
+				&
+			\\
+				$\beta_H$ 
+				& Human infection
+				&
+				&
+			\\
+				& probability  by vectors
+				&
+				& (\num{0}, \num{0.05}] 
+				& ---------
+			\\
+				$\beta_M$
+				& Vector infection 
+				&
+				&
+				&
+			\\
+				& probability by humans
+				&
+				& (\num{0}, \num{0.05}] 
+				& ---------
+			\\
+				$p_c$
+				& Probability of acquire  
+					 
+			\\
+				
+<<<<<<< HEAD
+				& classic dengue,
+					given a  
+			\\
+				& load virus mosquito bit.
+				&
+			\\
+				$\alpha_{a}$ 
+				& Mean recover rate 
+			\\
+				& from Asymptomatic 
+				&
+				&
+				&
+			\\
+				& Dengue
+			\\
+				$\alpha_{c}$ 
+				& Mean recover rate \\
+				& from Classic Dengue
+				&
+				&
+			\\
+				$\alpha_{h}$
+				& Mean recover rate 
+				&
+				&
+			\\
+				& from Hemorrhagic 
+			\\
+				& Dengue
+=======
+			$\beta_H$ &	Human infection \\
+            	&		probability  by vectors
+				&	& (\num{0}, \num{0.05}] & ---	\\
+			$\beta_M$	& Vector infection \\
+            		& probability by humans
+				&	& (\num{0}, \num{0.05}] & \cite{Feng1997a}\\
+			$\alpha_{c}$ & Mean recover rate \\
+            	&	from Classic Dengue
+				&	&	
+			\\
+			$\alpha_{h}$	& Mean recover rate \\
+            				& from Hemorrhagic  Dengue
+			$\sigma$			& Suceptibility two stain 2
+>>>>>>> 7b2fffd8fcc53b55ea3fe9907bd9d0336fc57245
+			\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	\caption{Parameter description}
+\end{table}
+\section*{New proposals Oct-23-2017}
+
+\section{Virus load model.}
+\begin{equation}
+	\begin{aligned}
+		\frac{dM_S}{dt}&= 
+			\Lambda_M - \frac{\beta_Mb}{N_H}
+			(H_a+H_c+H_h)M_S-\mu_MM_S
+		\\
+		\frac{dM_1}{dt}
+			&=
+			\frac{\beta_Mb}{N_H}
+			(H_a + H_c + H_h) M_S 
+			-
+			(\gamma_1 + \mu_M) M_1
+		\\
+		\frac{dM_2}{dt}&=
+			\gamma_1M_1-\mu_MM_2
+		\\
+		\frac{dH_S}{dt}&=
+			\Lambda_H
+			-\frac{\beta_H b}{N_H}(M_1 + M_2)H_S
+			-\mu_HH_S
+	\\
+		\frac{dH_a}{dt}&=
+			\frac{\beta_H b}{N_H} M_1 H_S
+			-
+			(\alpha_a + \mu_H) H_a
+	\\
+		\frac{dH_c}{dt}&=
+			\frac{\beta_H b p_c}{N_H} M_2 H_S
+			-(\alpha_c + \mu_H) H_c
+	\\
+		\frac{dH_h}{dt}&=
+			\frac{\beta_H b(1-p_c)}{N_H}
+			M_2 H_S
+		-
+		(\alpha_h + \mu_H) H_h
+	\end{aligned}
+\end{equation}
+Taking the infection forces as
+\begin{align*}
+	A_a &:= 
+		\frac{\beta_Mb}{N_H} H_a, 
+	&
+	A_c &:=
+		\frac{\beta_Mb}{N_H}H_c ,
+	&
+	A_h &:=
+		\frac{\beta_Mb}{N_H}H_h,
+	\\
+	B_1&:=
+		\frac{\beta_Hb}{N_H}M_1,
+	&
+	B_2&:=
+		\frac{\beta_Hbc_2}{N_H}M_2, 
+	&
+	B_3&:=
+		\frac{\beta_Hb(1-c_2)}{N_H}M_2,
+\end{align*}
+yields
+\begin{equation}
+	\begin{aligned}
+		\frac{dM_S}{dt}
+			&= \Lambda_M 
+			-(A_a + A_c + A_h) M_S 
+			- \mu_M M_S
+		\\
+		\frac{dM_1}{dt}
+			&= (A_a + A_c + A_h) M_S 
+			-(\gamma_1 + \mu_M) M_1
+		\\
+		\frac{dM_2}{dt}
+			&=\gamma_1M_1 - \mu_MM_2
+		\\
+		\frac{dH_S}{dt}
+			&=\Lambda_H - 
+			\frac{\beta_Hb}{N_H}
+				(M_1 + M_2)
+				H_S-\mu_HH_S
+		\\
+		\frac{d H_a}{dt}
+			&=B_1H_S - (\alpha_a + \mu_H) H_a
+		\\
+		\frac{dH_c}{dt}
+			&=B_2H_S
+			-(\alpha_c+\mu_H) H_c
+		\\
+		\frac{dH_h}{dt}
+			&=B_3H_S
+			-(\alpha_h+\mu_H) H_h
+	\end{aligned}
+\end{equation}
+%
+%
+%
+\subsection{Model description and parameters meaning}
+	
+\subsection{Discussion of $\mathcal{R}_0$}
+	Using the next generation operator we gets
+	
+	\begin{equation}
+		\mathcal{R}_0 =
+			\sqrt{
+				\frac{\beta_M \beta_H b^2 N_M}{(\gamma_1 + \mu_M) N_H }
+				\left(
+					\frac{(1-c)\gamma_1}{\mu_M (\alpha_h + \mu_H)}+
+					\frac{c \gamma_1}{\mu_M (\alpha_c + \mu_H)}+
+					\frac{1}{ \alpha_a + \mu_H}
+				\right)
+			}
+	\end{equation}
+<<<<<<< HEAD
+\section{A two strain model.}
+%%
+\begin{equation}
+	\begin{aligned}
+		\frac{dM_S}{dt}&=
+			\Lambda_M
+			-\frac{\beta_Mb}{N_H}
+			(I_1 + I_2 + Y_{-1} + Y_{-2})M_S
+			-\mu_MM_S
+		\\
+		\frac{dM_1}{dt}&=
+			\frac{\beta_Mb}{N_H}
+			(I_1 + Y_{-2}) M_S - \mu_M M_1
+		\\
+		\frac{dM_2}{dt}&=
+			\frac{\beta_Mb}{N_H}
+			(I_2 + Y_{-1}) M_S - \mu_M M_2
+		\\
+		\frac{dI_S}{dt}&=
+			\Lambda_S 
+			- \frac{ \beta_H b }{N_H}
+				(M_1 + M_2)I_S - \mu_H I_S
+		\\
+		\frac{dI_1}{dt}&=
+			\frac{\beta_Hb}{N_H}
+			M_1 I_S - (\alpha_c + \mu_H) I_1
+		\\
+		\frac{dI_2}{dt}&=
+			\frac{\beta_Hb}{N_H} M_2 I_S 
+			- ( \alpha_c + \mu_H ) I_2
+		\\
+		\frac{dS_{-1}}{dt}&=
+			\Lambda_{-1}
+			-\frac{ \beta_Hb }{N_H} M_2 S_{-1}
+			-\mu_HS_{-1}
+		\\
+		\frac{dS_{-2}}{dt}&=
+			\Lambda_{-2}
+			-\frac{\beta_Hb}{N_H}M_1S_{-2}
+			-\mu_HS_{-2}
+		\\
+		\frac{dY_{-1}}{dt}&=
+			\frac{\beta_Hb}{N_H}
+			M_2 S_{-1}
+			- (\alpha_h + \mu_H) Y_{-1}
+		\\
+		\frac{dY_{-2}}{dt}&=
+			\frac{\beta_Hb}{N_H}
+			M_1 S_{-2}
+			-( \alpha_h + \mu_H) Y_{-2}
+	\end{aligned}
+\end{equation}
+Defining the infection forces as
+\begin{equation}
+	\begin{aligned}
+		A_1&:=
+			\frac{\beta_Mb}{N_H} I_1,
+		&
+		A_2&:=
+			\frac{\beta_Mb}{N_H} I_2, 
+		&
+		A_3&:=
+			\frac{\beta_Mb}{N_H} Y_{-1},
+		&
+		A_4&:=
+			\frac{\beta_Mb}{N_H} Y_{-2},
+		\\
+		B_1&:=
+			\frac{\beta_Hb}{N_H} M_1, 
+		&
+		B_2&:=
+			\frac{\beta_Hb}{N_H} M_2,
+	\end{aligned}
+\end{equation}
+we rewrite the model \eqref{*} as
+\begin{equation}
+\begin{aligned}
+	\frac{dM_S}{dt}&= 
+		\Lambda_M
+		-(A_1 + A_2 + A_3 + A_4) M_S
+		-\mu_M M_S
+	\\
+	\frac{dM_1}{dt}&=
+		(A_1+A_4)M_S - \mu_M M_1
+	\\
+	\frac{dM_2}{dt}&=
+		(A_2+A_3)M_S-\mu_MM_2
+	\\
+	\frac{dI_S}{dt}&=
+		\Lambda_S - (B_1 + B_2)I_S
+		-\mu_HI_S
+	\\
+	\frac{dI_1}{dt}&=
+		B_1 I_S
+		-(\alpha_c + \mu_H) I_1
+	\\
+	\frac{dI_2}{dt}&=
+		B_2 I_S 
+		-(\alpha_c + \mu_H)I_2
+	\\
+	\frac{dS_{-1}}{dt}&=
+		\Lambda_{-1}-B_2S_{-1}-\mu_HS_{-1}
+	\\
+	\frac{dS_{-2}}{dt}&=
+		\Lambda_{-2}-B_1S_{-2}-\mu_HS_{-2}
+	\\
+	\frac{dY_{-1}}{dt}&=
+		B_2S_{-1}
+		-(\alpha_h + \mu_H)Y_{-1}
+	\\
+	\frac{dY_{-2}}{dt}&=
+		B_1 S_{-2} 
+		- (\alpha_h + \mu_H) Y_{-2}
+	\\
+\end{aligned}
+\end{equation}
+%
+%
+$I_i$ is the infected individual class with serotype $i$; $S_{-i}$ are the 
+individuals who were infected with serotype $i$ in previous years and for the 
+current year are susceptible to a serotype different from $i$; $Y_{-i}$ is the 
+class of reinfected individuals with serotype different from $i$.
+
+	The disease free equilibrium results
+$$
+	FDE^*=
+	\left(
+		\frac{\Lambda_M}{\mu_M},
+		0,
+		0,
+		\frac{\Lambda_S}{\mu_H},
+		0,
+		\frac{\Lambda_{-1}}{\mu_H},
+		0,
+		\frac{\Lambda_{-2}}{\mu_H},
+		0
+	\right).
+$$
+Next, using the next generation operator method (citar a velasco) we obtain
+the basic reproductive number
+%
+\begin{equation}
+	R_0=
+	\max\
+	\left\{ 
+		\sqrt{
+			\frac{\beta_H\beta_Mb^2N_M}{\mu_M\mu_HN_H^2}
+			\left(
+				\frac{\Lambda_{-1}}{\alpha_h+\mu_H}
+				+
+				\frac{\Lambda_H}{\alpha_c+\mu_H} 
+			\right)
+		},
+		\sqrt{
+			\frac{\beta_H\beta_Mb^2N_M}{\mu_M\mu_HN_H^2}
+			\left(
+				\frac{\Lambda_{-2}}{\alpha_h+\mu_H}
+				+
+				\frac{\Lambda_H}{\alpha_c+\mu_H}
+			\right)
+		}
+	\right\}.
+\end{equation}
+%
+=======
+
+
+
+%%
+>>>>>>> 7b2fffd8fcc53b55ea3fe9907bd9d0336fc57245
