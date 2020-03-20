@@ -20,7 +20,10 @@
 	develops vascular leaking.
 %
 \paragraph{\ac{DENV-2} report circulation in Hermosillo}
+According to \cite{Vazquez2011} and \cite{Reyes2017}, in year 2010 only DENV-1 was present in the state of Sonora. Based on this information it is not clear that reinfection with a second strain in 2010 is the main cause of DHF. However, contrary to these studies, one of the main hypothesis in this work is that DENV-2 was present in Sonora in 2010. Our hypothesis is based on previous experiences, just as mentioned in \cite{Gomez2014}. In this work, where the authors analyze the dengue situation in Mexico for the period 2000 to 2011, argue that the increase of DHF in 2001 in Yucatan was linked to the introduction of the DENV-2 strain. Therefore, part of our hypothesis is that in 2010 there was an introduction of the DENV-2 into the Sonora state. 
+
 \paragraph{Asymptomatic and reported cases}
+
 
 We assume that the $95\%$ (pendiente) of the \ac{DCF} are asymptomatic, whereas for 
 \ac{DHF}  all the cases are reported. Therefore, the class $Y_{-1}^{[h]}$ accounts for
@@ -94,10 +97,8 @@ $M_1$, $M_2$ respectively denotes the vector
 Infected classes with \ac{DENV-1}
 and \ac{DENV-2}.
 \paragraph{Host disease dynamics}
-
-(Saul...no se ría...soy lento pero ai voy..hay que poner las ideas en orden. jejeje) Susceptible individuals ($S$) become infected for the first time with DENV-1 or DENV-2 after a successful mosquito bite and move to classes $I_1$ and $I_2$, respectively. From here, they move to a recovered class $R_S$, and for the rest of the epidemic they are immune to any serotype. $S_{-1}$ are the individuals who obtained DENV-1 in previous years are susceptible only to DENV-2 for the current year. They can become infected with DENV-2 and the outcome is DF ($Y_{-1}^{[c]}$) or DHF ($Y_{-1}^{[h]}$). Finally, all the infected individuals eventually move to the recovered class $R_{S{-1}}$.
-
-For our model, $\mu_H$ is the human death rate; $\alpha_c$ and $\alpha_h$ are the recovery rates from DCF and DHF, respectively; $b$ is the number of bites per week per mosquito and $\beta_H$ is the effectiveness of the bite. From the current hypothesis our model is given by    
+ Susceptible individuals ($S$) become infected for the first time with DENV-1 or DENV-2 after 
+ a successful mosquito bite and move to classes $I_1$ and $I_2$, respectively. From here, they remain in the infected class for $1/\alpha_c$ time units, after which, move to a recovered class $R_S$.  As we are interested in a one year dynamics, for the rest of the epidemic they become immune to any serotype. A second class of susceptible individuals $S_{-1}$, consist on those who acquired DENV-1 in previous years and in the current year are susceptible only to DENV-2. Such individuals become infected with DENV-2 when exposed to infected mosquitoes with that serotype. In \cite{OhAinle2011} and \cite{Sangkawibha1984} it was observed that a more severe version of dengue occurs (might occur?) when an individual acquires dengue for a second time, and this happens to be DENV-2. Based on this assumption, an individual from $S_{-1}$ moves to $Y_{-1}^{[c]}$ or $Y_{-1}^{[h]}$, if the infection leads to DF or DHF, respectively. Finally, these infected individuals move to the recovered class $R_{S_{-1}}$ at rates $\alpha_c$ and $\alpha_h$, respectively. For our model, $\mu_H$ is the human death rate; $b$ is the number of bites per week per mosquito and $\beta_H$ is the effectiveness of the bite. From the current hypothesis our model is given by    
 
 %Assuming sufficient density of vectors, we 
 %describe the \ac{DCF} and \ac{DHF},
@@ -122,7 +123,41 @@ For our model, $\mu_H$ is the human death rate; $\alpha_c$ and $\alpha_h$ are th
 %susceptible only to a serotype different of $i$.
 %Dengue cross infection.
 
-\begin{equation}\label{eqn:model_two_strains}
+\begin{equation}\label{eqn:model_two_strains1}
+	\begin{aligned}
+		\frac{dS}{dt} &=
+			\mu_HN_S - (B_{M_1} + B_{M_2}) S
+			-\mu_H S
+		\\
+		\frac{dI_1}{dt} &=
+			B_{M_1} S
+			-(\alpha_c + \mu_H) I_1
+		\\
+		\frac{dI_2}{dt} &=
+			B_{M_2} S
+			-(\alpha_c + \mu_H)I_2
+		\\
+        \frac{dR_S}{dt}&=\alpha_c I_2-\mu_H R_S
+		\\
+		\frac{dS_{-1}}{dt} &=
+			\mu_HN_{S_{-1}}- \sigma B_{M_2} S_{-1}-\mu_H S_{-1}
+		\\
+		\frac{dY_{-1} ^{[c]} }{dt} &=
+			(1 - \theta) \sigma B_{M_2} S_{-1}
+			-(\alpha_c + \mu_H) Y_{-1} ^ {[c]}
+		\\
+		\frac{dY_{-1}^{[h]}}{dt} &=
+			\theta \sigma B_{M_2} S_{-1}
+			-(\alpha_h + \mu_H)Y_{-1} ^{[h]} 
+		\\
+		\frac{dR_{S_{-1}}}{dt} &= 
+			\alpha_c Y_{-1} ^{[c]}
+			+ \alpha_h Y_{-1} ^ {[h]} - \mu_H R
+	\end{aligned}
+\end{equation}
+Here, we take $N_H=N_S+N_{S_{-1}}$ as the total number of individuals. For our formulation $N_H, N_S$ and $N_{S_{-1}}$ remain constant. $N_S$ is the total number of individuals that are involved in the first infection dynamics ($N_S = S +I_1+I_2+R_S$). On the other hand $N_{S_{-1}}$ is the total number of individuals involved in the reinfection dynamics ($N_{S_{-1}}=S_{-1}+Y_1^{[c]}+ Y_1^{[h]}+R_{S_1}$). Also, the recovered individuals in both classes can be considered as a single recovered class $R=R_S+R_{S_{-1}}$ as our dynamics are taken only for one year. Then, our equations become
+
+\begin{equation}\label{eqn:model_two_strains2}
 	\begin{aligned}
 		\frac{dS}{dt} &=
 			\mu_HN_S - (B_{M_1} + B_{M_2}) S
@@ -155,7 +190,12 @@ For our model, $\mu_H$ is the human death rate; $\alpha_c$ and $\alpha_h$ are th
 			+ \alpha_h Y_{-1} ^ {[h]} - \mu_H R
 	\end{aligned}
 \end{equation}
-Here, we take $N_H=N_S+N_{S_{-1}}$ as the total number of individuals. For our formulation $N_H, N_S$ and $N_{S_{-1}}$ remain constant. $N_S$ is the total number of individuals that are involved in the first infection dynamics ($N_S = S +I_1+I_2+R_S$). On the other hand $N_{S_{-1}}$ is the total number of individuals involved in the reinfection dynamics ($N_{S_{-1}}=S_{-1}+Y_1^{[c]}+ Y_1^{[h]}+R_{S_1}$). All the recovered individuals in both classes belong to the recovered class $R=R_S+R_{S_{-1}}$ as our dynamics are considered only for one year. 
+
+
+
+
+
+
 
 \todo{Fix $\Lambda _{\cdot} = N$. }
 
@@ -212,8 +252,10 @@ the basic reproductive number
 %
 \begin{equation}
 	\begin{aligned}
+		\psi &:= \frac{\beta_MbN_M}{\mu_MN_H}
+		\\
 		R_{0c} & := \sqrt{
-			\left(\frac{\beta_MbN_M}{\mu_MN_H}\right)
+			\psi
 			\left(
 				\frac{\beta_HbN_S}{ (\alpha_c + \mu_H)N_H}
 				+
@@ -237,12 +279,13 @@ for classical and hemorrhagic dengue cases, respectively. From here, $R_0$
 provides a measure of how DF and DHF infected people influence the presence of 
 new dengue cases (Either DF or DHF). $R_{0h}$ measures the new hemorrhagic 
 cases that arise from one hemorrhagic infected individual in a population of 
-$N_{s-1}$ susceptible to strain 2 individuals, meanwhile $R_{oc}$ provides a 
-measure of how many new individuals will obtain DC fever from an individual 
-that has or has not have acquired dengue previously.
+$N_{S_{-1}}$ susceptible to strain 2 individuals, meanwhile $R_{oc}$ provides a 
+measure of how many new individuals will obtain DC fever (DF?) from an individual 
+that has or has not have acquired dengue previously (from an individual that has either
+DF or DHF).
 
 	Observe that this $R_0$ differs in some way to the traditional $R_0$ where two
-different serotypes are involved (include citations of $R_0$ for two serotypes).
+different serotypes are involved (\cite{Feng1997a} include citations of $R_0$ for two serotypes).
 This follows from the idea that we are interested in classic and hemorrhagic
 cases rather than the predominance of a serotype.
 

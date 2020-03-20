@@ -1,6 +1,6 @@
 \begin{table*}[htb]
-	\begin{center}
-		\begin{tabular}{rllll}
+	%\begin{center}
+		\begin{tabular}{rlcll}
 			\toprule
 			Symbol		&	\multicolumn{1}{c}{Meaning} &
 				Reference	& Range & units
@@ -15,49 +15,47 @@
 		    $M_2(0)$
 		    &  mosquitoes.
 		\\
+		$N_H$
+		    & Total Susceptible population
+		    &  INEGI (see \cref{sec:Intro})
+		    & \num{283493}
 		\\
 			$b$
 			& Biting rate
 			&\cite{YasunoM1990}
-			&[1.48 , 4.77] & $\si{meals \per day}$ 
+			&[10.36 , 33.39] & $\si{meals \per week}$ 
 		\\
 			$\Lambda_S$
 				& Human birth rate
 				&
 				& 
 					$\mu_H \cdot (N_H - N_{S_{-1}})$
-				& $\si{day^{-1}}$
+				& $\si{week^{-1}}$
 		\\
 			$\Lambda_{S_{-1}}$
 				& Human birth rate
 				&
 				& 
 					$\mu_H \cdot N_{S_{-1}}$
-				& $\si{day^{-1}}$
+				& $\si{week^{-1}}$
 		\\
 			$\Lambda_M$
 			& Vector birth rate
 			&
 			& $\mu_M \cdot N_M$
-			& $\si{day^{-1}}$
+			& $\si{week^{-1}}$
 		\\
 			$\mu_M$
 			& vector mortality rate
 			& \cite{YANG2009}
-      & [\num{0.036}, \num{0.109}] 
-      & $\si{day^{-1}}$
+            & [\num{0.252}, \num{0.763}] 
+            & $\si{week^{-1}}$
     \\
 			$\mu_H$
 			& Human mortality
 			&---
-			& \num{3.9139E-05} 
-			& $\si{day^{-1}}$
-		\\
-			$N_H$   
-			& Sampler Population size  
-			&---
-			&\num{40000}
-			&---	
+			& \num{0.000273973} 
+			& $\si{week^{-1}}$
 		\\
 			$\beta_H$ 
 			&	Human infection 
@@ -78,12 +76,12 @@
 			\\
       & from Classic Dengue
 			&\cite{Pinho2010}
-			& [\num{0.083},\num{0.25}] & $\si{day^{-1}}$
+			& [\num{0.581}, \num{1.75}] & $\si{week^{-1}}$
 		\\
 			$\alpha_{h}$	& Mean recover rate
 			& \cite{Pinho2010} 
-			& [\num{0.083},\num{0.25}] 
-			& $\si{day^{-1}}$
+			& [\num{0.581}, \num{1.75}] 
+			& $\si{week^{-1}}$
 		\\
 			& from Hemorrhagic Dengue
 		\\
@@ -92,6 +90,7 @@
 		\\
 			& \ac{DENV-2}.
 			& \cite{Feng1997a}
+			& $(0,5)$
       \\
             $p$ 
             & 
@@ -99,7 +98,7 @@
             &
             \cite{balmaseda2006high},
             &
-            $[\frac{1}{30}, \frac{1}{60}]$
+            $[\frac{1}{60}, \frac{1}{30}]$
             & ---
             \\
             & &
@@ -114,7 +113,7 @@
 			\\
 			\bottomrule
 		\end{tabular}
-	\end{center}
+	%\end{center}
 	\caption{Parameter description}
 	\label{tbl:parameter_description}
 \end{table*}
