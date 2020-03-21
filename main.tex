@@ -1,4 +1,4 @@
-\documentclass{imammb}
+\documentclass[draft, openbib]{imammb}
 \jno{dqnxxx}
 \usepackage[english]{babel}
 \usepackage[pagebackref=true]{hyperref}
@@ -16,7 +16,6 @@
 \usepackage{color}
 \usepackage{proba}
 \usepackage{natbib}
-
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{cleveref}
 \usepackage{paralist}
@@ -27,7 +26,8 @@
 \usepackage{siunitx}
 \usepackage{acro}
 \input{setup}
-
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={((},close={))}}
 \newcommand{\tinytodo}[2][]
 {\todo[caption={#2}, size=\tiny, #1]{
 	\renewcommand{\baselinestretch}{0.5}\selectfont#2\par}
@@ -37,65 +37,64 @@
 \def\citeasnoun{\cite}
 %
 \begin{document}
-<<<<<<< HEAD
-% 	%\input{frontmater}
-     \today
-     \section{Introduction} \label{intro}
-         State the objectives of the work and provide an adequate 
-         background, avoiding a detailed literature survey or a 
-         summary of the results.
-% %
-         \paragraph{Objectives}
-         Our objective is to explain the dengue hemorrhagic outbreak that 
-      occurred in the city of Hermosillo, Sonora in2010.
-%     %
-     \paragraph{Severity}
-     \ac{DCF} 
-     \ac{DHF} description.
-     \paragraph{ADE hypothesis}
-      sequence and
-      \\
-      \ac{DENV-1}, \ac{DENV-2}
-      reinfection as cause of hemorrhagic.
-         \paragraph{Background}
-       
-     \section{Material and methods}
-         Provide sufficient detail to allow the work to be 
-         reproduced, with details of supplier and catalogue 
-         number when appropriate. Methods already published 
-         should be indicated by a reference: only relevant 
-         modifications should be described.
-         \subsection{Data}
-             \paragraph{Data description (Pablo)}
-            	\input{data_description.tex} % Pablo
-             \paragraph{Socioeconomic description: 
-                 homogeneity of regarding initial
-                 grow geographic area (Ana-Lucia)}
-         \input{socioeconomic_homogenety.tex} % Ana-Lucia
-         \subsection*{Model}
-             \input{model_introduction.tex}
-             \input{main_hypothesis.tex} % Daniel
-             \input{twoStrainsModel.tex}
-             \input{tableParameters.tex}
-         \subsection{$R_0$ estimation (Montoya)}
-             \input{data_analysis.tex} % Montoya
-             \input{estimation.tex}    % Montoya
-     \section{Results}
-         Results should be clear and concise.
-         \paragraph{Modeling Results (Saúl-Daniel)}
-         \paragraph{Data analysis (Saúl-Montoya)}
-         \paragraph{$R_0$ and parameter inference (Montoya)}
-=======
-	\begin{frontmatter}
-		\input{frontmater}
-	\end{frontmatter}
-	\today
-    \section{Introduction} \label{intro}
-		State the objectives of the work and provide an adequate 
-		background, avoiding a detailed literature survey or a 
-		summary of the results.
+    \title{
+        Modeling and $R_0$ estimation  of the 2010 Dengue Hemorrhagic Fever 
+        Outbreak in Hermosillo Sonora.
+    }    
+    \author{%
+            {\sc S. D\'{\i}az-Infante%
+                \footnote{Corresponding author. 
+                    Present address: Departamento de Matem\'aticas, Universidad de Sonora
+                    Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, Sonora, C.P. 83000,
+                    M\'exico. Email: saul.diazinfante@unison.mx
+                }
+            }\\[2pt]
+        CONACYT-Universidad de Sonora,
+        Departamento de Matem\'aticas, Universidad de Sonora\\[6pt]
+        Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, Sonora, C.P. 83000,
+        M\'exico\\ 
+        {\sc J. A. Montoya Laos 
+            \footnote{Email: montoya@unison.mx}
+        }\\[2pt]   
+        Universidad de Sonora,
+        Departamento de Matem\'aticas, Universidad de Sonora\\[6pt]
+        Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, Sonora, C.P. 83000,
+        M\'exico\\ 
+        %
+        { \sc and
+            \\
+             D. Olmos Liceaga 
+            \footnote{Email: daniel.olmos@unison.mx}
+        }\\[2pt]   
+        Universidad de Sonora,
+        Departamento de Matem\'aticas, Universidad de Sonora\\[6pt]
+        Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, Sonora, C.P. 83000,
+        M\'exico\\ 
+        {\rm [\today]}\vspace*{6pt}
+    }
+    
+    \pagestyle{headings}
+    \markboth{S. D\'{\i}az-Infante, J. A. Montoya Laos and D. Olmos Liceaga }{\rm 
+        Modeling and $\mathcal{R}_0$ estimation of the 2010 Dengue Hemorrhagic Fever Outbreak in Hermosillo Sonora}
+    \maketitle
+    \begin{abstract}
+        {We model and estimate the basic reproductive number of Dengue  and 
+        Dengue Hemorrhagic Fever outbreak of the 2010 from Hermosillo Sonora.
+        Our results suggest that serotype DENV-2 of the Dengue virus and the cross 
+        infection risk enhancement hypothesis, could explain the incidence of
+        Dengue Hemorrhagic Fever cases reported by Secretaria de Salud del Estado de 
+        Sonora.}
+        {Differential Equations;
+        Dengue Hemorrhagic Fever; 
+        Boot strap;}
+    \end{abstract}
 
-		\paragraph{Objectives}
+    \section{Introduction} \label{intro}
+        State the objectives of the work and provide an adequate 
+        background, avoiding a detailed literature survey or a 
+        summary of the results.
+
+        \paragraph{Objectives}
         Our objective is to explain the dengue hemorrhagic outbreak that 
      occurred in the city of Hermosillo, located in the state of Sonora in 2010.
     %
@@ -103,108 +102,179 @@
     \ac{DCF} 
     \ac{DHF} description.
     \paragraph{ADE hypothesis}
-     \\
      \ac{DENV-1}, \ac{DENV-2}
      reinfection as cause of hemorrhagic.
-		\paragraph{Background}
-        It was reported that in 2010 there was present only DENV-1 circulating in Hermosillo (Tesis de Pablo. La referencia que menciona ya no se encuentra disponible por internet.) 
-	\section{Material and methods}
-		Provide sufficient detail to allow the work to be 
-		reproduced, with details of supplier and catalogue 
-		number when appropriate. Methods already published 
-		should be indicated by a reference: only relevant 
-		modifications should be described.
-		\subsection{Data}
-		    \label{sec:Intro}
-			\paragraph{Data description (Pablo)}
-           	\input{data_description.tex} % Pablo
-			\paragraph{Socioeconomic description: 
-            	homogeneity according to population density index}
+        \paragraph{Background}
+            It was reported that in 2010 there was present only DENV-1 circulating
+        Hermosillo (Tesis de Pablo. La referencia que menciona ya no se encuentra
+        disponible por internet.)  
+        \section{Material and methods}
+        Provide sufficient detail to allow the work to be 
+        reproduced, with details of supplier and catalogue 
+        number when appropriate. Methods already published 
+        should be indicated by a reference: only relevant 
+        modifications should be described.
+        \subsection{Data}
+            \label{sec:Intro}
+            \paragraph{Data description (Pablo)}
+            \input{data_description.tex} % Pablo
+            \paragraph{Socioeconomic description: 
+                homogeneity according to population density index}
         \input{socioeconomic_homogenety.tex} % Ana-Lucia
-		\subsection*{Model}
-			\input{model_introduction.tex}
+        \subsection*{Model}
+            \input{model_introduction.tex}
       \input{main_hypothesis.tex} % Daniel
-			\input{twoStrainsModel.tex}
-			\input{tableParameters.tex}
-		\subsection{$R_0$ estimation (Montoya)}
-		We suppose that the number of cases of classic and hemorrhagic dengue are observed at time points $t_{1}, \dots , t_{n}$. Here we assume that these processes, denoted by $X_{t}$ and $Y_{t}$ respectively, follow a Poisson distribution with mean $\lambda_{h}\left(t\right)=Y_{-1}^{[h]}$ and $\lambda_{c}\left(t\right)=Z$, where
-			\input{data_analysis.tex} % Montoya
+            \input{twoStrainsModel.tex}
+            \input{tableParameters.tex}
+        \subsection{$R_0$ estimation (Montoya)}
+        We suppose that the number of cases of classic and hemorrhagic
+        dengue are observed at time points $t_{1}, \dots , t_{n}$.
+        Here we assume that these processes, denoted by $X_{t}$ and
+        $Y_{t}$ respectively, follow a Poisson distribution with mean
+        $\lambda_{h}\left(t\right)=Y_{-1}^{[h]}$ and
+        $\lambda_{c}\left(t\right)=Z$, where
+            \input{data_analysis.tex} % Montoya
             \input{estimation.tex}    % Montoya
-    In our case the vector of parameters of the ordinary differential equations model is $\phi=\left(\phi_{1},\phi_{2}\right)$, where $\phi_{1}=\left(\beta_{H},\beta_{M}\right)$ is regarded as unknown and 
- $\phi_{2}=\left(\alpha_{c},\alpha_{h},b,\mu_{H},\mu_{M},\sigma,\theta,p\right)$ is known in advance. We write $\lambda_{h}\left(t\right)$ and $\lambda_{c}\left(t\right)$ as $\lambda_{h}\left(t;\phi_{1}\right)$ and $\lambda_{c}\left(t;\phi_{1}\right)$ to emphasize this fact.
+        In our case the vector of parameters of the ordinary differential
+        equations model is $\phi=\left(\phi_{1},\phi_{2}\right)$, where
+        $\phi_{1}=\left(\beta_{H},\beta_{M}\right)$ is regarded as unknown and
+        $\phi_{2}=\left(\alpha_{c},\alpha_{h},b,\mu_{H},\mu_{M},\sigma,\theta,p\right)$
+        is known in advance. We write $\lambda_{h}\left(t\right)$ and
+        $\lambda_{c}\left(t\right)$ as $\lambda_{h}\left(t;\phi_{1}\right)$
+        and $\lambda_{c}\left(t;\phi_{1}\right)$ to emphasize this fact.
  
- We use the likelihood approach to estimate the vector parameter $\psi_{1}$ based on the observed samples $\vec{x}=\left(x_{t_1}, \dots , x_{t_n} \right)$ and $\vec{y}=\left(y_{t_1} \dots , y_{t_n} \right)$. The resulting likelihood function is thus
-\begin{equation}
-\begin{split}
-	L\left(\phi_{1}\right)
-	&= \prod_{i=1}^{n} \left\{ \frac{1}{x_{t_i}!}\left[\lambda_{h}\left(t_{i};\phi_{1}\right)\right]^{x_{t_i}} \exp\left[\lambda_{h}\left(t_{i};\phi_{1}\right)\right] \right   \\
-	& \quad \quad \quad
-	\left \frac{1}{y_{t_i}!}\left[\lambda_{c}\left(t_{i};\phi_{1}\right)\right]^{y_{t_i}}\exp\left[\lambda_{c}\left(t_{i};\phi_{1}\right)\right]\right\}.
-	\label{LikFun}
-\end{split}
-\end{equation}
-The maximum likelihood estimate (MLE) of $\phi_{1}$ is that value of $\phi_{1}$ that maximizes $L\left(\phi_{1}\right)$ in (\ref{LikFun}). We denote the MLE of $\phi_{1}$ as $\hat{\phi}_{1}$.
+        We use the likelihood approach to estimate the vector
+        parameter  $\psi_{1}$ based on the observed samples
+        $\vec{x}=\left(x_{t_1}, \dots , x_{t_n} \right)$ and
+        $\vec{y}=\left(y_{t_1} \dots , y_{t_n} \right)$. The resulting
+        likelihood function is thus
 
-We now consider profile-likelihood inference based on (1) for estimating the parameters of interest ($R_{01}$, $R_{02}$, and $\mathcal{R}_{0}$). Here we assume without loss of generality that $\phi_{1}=\left(\beta_{H},\beta_{M}\right)$ can be rewritten as $\phi_{1}=\left(\gamma,\eta\right)$, where $\gamma$ is a scalar parameter of interest and $\eta$ is a scalar nuisance parameter. For example, we may only be interested in $R_{01}$. In this case, we can rewrite the parameter $\beta_{M}$ as a function of the parameters $R_{01}$ and $\beta_{H}$,
-\begin{equation}
-\beta_{M}=C\frac{R_{01}}{\beta_{H}}, \nonumber
-\end{equation}
-where
-\begin{equation}
-C=\left[\left(\frac{N_H - N_{S_{-1}}}{\alpha_c + \mu_H}+\frac{(1- \theta ) \sigma N_{S_{-1}}}{ \alpha_c + \mu_H}\right)\left(\frac{b^2\Lambda_M}{\mu_M ^ 2  N_H ^ 2}\right)\right]^{-1} \nonumber
-\end{equation}
-Thus, we reparametrize the model in terms of $\phi_{1}=\left(\gamma,\eta\right)=\left(R_{01},\beta_{H}\right)$, where $\gamma=R_{01}$ is the parameter of interest and $\eta=\beta_{H}$ is the nuisance parameter.
+    \begin{equation}
+        \begin{split}
+            L \left( \phi_{1} \right)
+             &= \prod_{i = 1} ^ {n} 
+             \left \{ 
+                 \frac{1}{x_{t_i}!}
+                     \left[\lambda_{h}
+                         \left(t_{i};\phi_{1}\right)
+                     \right] ^ {x_{t_i}} \exp
+                     \left[
+                         \lambda_{h} \left(t_{i}; \phi_{1} \right)
+                     \right] 
+             \right. 
+            % \\
+            % & \quad \quad \quad
+            \left.
+                 \frac{1}{y_{t_i}!}
+                 \left[\lambda_{c}
+                     \left(t_{i};\phi_{1}\right)
+                 \right] ^ {y_{t_i}}
+                 \exp
+                 \left[
+                     \lambda_{c}
+                     \left(t_{i};\phi_{1}\right)
+                 \right]
+             \right\}.\label{LikFun}
+        \end{split}
+    \end{equation}
+    The maximum likelihood estimate (MLE) of $\phi_{1}$ is that value 
+    of $\phi_{1}$ that maximizes $L\left(\phi_{1}\right)$ in 
+    \eqref{LikFun}. We denote the MLE of $\phi_{1}$ as $\hat{\phi}_{1}$.
 
-The profile likelihood and its corresponding relative likelihood function of $\gamma$, standardized to be one at the maximum of the likelihood function, are
-\begin{equation}
-\begin{split}
-L_{\max}\left(\gamma\right)&=\max_{\eta}L\left(\phi_{1}=\left(\gamma,\eta \right)\right),  \nonumber \\
-R_{\max}\left(\gamma\right)&=\frac{L_{\max}\left(\gamma\right)}{\displaystyle\max_{\phi_{1}}L\left(\phi_{1}\right)},
-\end{split}
+        We now consider profile-likelihood inference based on (1) for
+    estimating the parameters of interest ($R_{01}$, $R_{02}$, and
+    $\mathcal{R}_{0}$). Here we assume without loss of generality that
+    $\phi_{1}=\left(\beta_{H},\beta_{M}\right)$ can be rewritten as
+    $\phi_{1}=\left(\gamma,\eta\right)$, where $\gamma$ is a scalar
+    parameter of interest and $\eta$ is a scalar nuisance parameter. For
+    example, we may only be interested in $R_{01}$. In this case, we can
+    rewrite the parameter $\beta_{M}$ as a function of the parameters
+    $R_{01}$ and $\beta_{H}$, 
+    \begin{equation}
+        \beta_{M}=C\frac{R_{01}}{\beta_{H}}, \nonumber
+    \end{equation}
+    where
+    \begin{equation}
+        C=\left[\left(\frac{N_H - N_{S_{-1}}}{\alpha_c + \mu_H}
+            +\frac{(1- \theta ) \sigma N_{S_{-1}}}{ \alpha_c + \mu_H}\right)
+            \left(\frac{b^2\Lambda_M}{\mu_M ^ 2  N_H ^ 2}\right)\right]^{-1} \nonumber
+    \end{equation}
+        Thus, we reparametrize the model in terms of 
+    $\phi_{1}=\left(\gamma,\eta\right)=\left(R_{01},\beta_{H}\right)$, 
+    where $\gamma=R_{01}$ is the parameter of interest and 
+    $\eta=\beta_{H}$ is the nuisance parameter.
+
+        The profile likelihood and its corresponding relative likelihood
+    function of $\gamma$, standardized to be one at the maximum of the
+    likelihood function, are 
+    \begin{equation}
+        \begin{split}
+            L_{\max}
+                \left(
+                \gamma\right)&=\max_{\eta}L\left(\phi_{1}=\left(\gamma,\eta \right)
+            \right),  \nonumber \\
+            R_{\max}
+            \left(
+                \gamma\right)   
+                &=  
+                    \frac{L_{\max}\left(\gamma\right)}{\displaystyle\max_{\phi_{1}}L\left(\phi_{1}\right)},
+        \end{split}
 \end{equation}
-where $L\left(\cdot\right)$ is the likelihood function given in (\ref{LikFun}). In particular, the relative profile likelihood varies between 0 and 1 and ranks all possible $\gamma$ values based only on the observed samples $\vec{x}=\left(x_{t_1}, \dots , x_{t_n} \right)$ and $\vec{y}=\left(y_{t_1} \dots , y_{t_n} \right)$. Thus, a graph of $R_{\max}\left(\gamma\right)$ allows to distinguish plausible and implausible values for $\gamma$.
+where $L\left(\cdot\right)$ is the likelihood function given in
+(\ref{LikFun}). In particular, the relative profile likelihood varies between
+0 and 1 and ranks all possible $\gamma$ values based only on the observed
+samples $\vec{x}=\left(x_{t_1}, \dots , x_{t_n} \right)$ and
+$\vec{y}=\left(y_{t_1} \dots , y_{t_n} \right)$. Thus, a graph of
+$R_{\max}\left(\gamma\right)$ allows to distinguish plausible and implausible
+values for $\gamma$.
 
 A level $\omega$ profile likelihood region (commonly an interval) for $\gamma$ is given by
 \begin{equation}
 \left\{\gamma: R_{\max}\left(\gamma\right) \geq \omega \right\}, \nonumber
 \end{equation}
-where $0 \leq \omega \leq 1$. We can assign a confidence level to the profile likelihood region of $\gamma$  considering the asymptotical behavior of the likelihood ratio statistic $D=-2\ln{R_{\max}\left(\gamma_{0}\right)}$. This is an asymptotic pivotal quantity having a Chi-squared distribution with one degree of freedom. Thus, approximate confidence levels of $99\%$, $95\%$ and $90\%$ can be ascribed to profile likelihood regions at $\omega$ = 0.036, 0.146, and 0.25, respectively.
-
-	\section{Results}
-		Results should be clear and concise.
-		\paragraph{Modeling Results (Saúl-Daniel)}
-
-
+where $0 \leq \omega \leq 1$. We can assign a confidence level to the
+profile likelihood region of $\gamma$  considering the asymptotical
+behavior of the likelihood ratio statistic
+$D=-2\ln{R_{\max}\left(\gamma_{0}\right)}$. This is an asymptotic
+pivotal quantity having a Chi-squared distribution with one degree of
+freedom. Thus, approximate confidence levels of $99\%$, $95\%$ and
+$90\%$ can be ascribed to profile likelihood regions at $\omega$ =
+0.036, 0.146, and 0.25, respectively.
+\section{Results}
+        Results should be clear and concise.
+        \paragraph{Modeling Results (Saúl-Daniel)}
 
 \paragraph{Data analysis (Saúl-Montoya)}
-		\paragraph{$R_0$ and parameter inference (Montoya)}
->>>>>>> 3191b2f0eac2936173678aaa74e57f42736c5ef7
+        \paragraph{$R_0$ and parameter inference (Montoya)}
 
-%     \section{Discussion}
-%         This should explore the significance of the results of 
-%     the work, not repeat them. A combined results and 
-%     Discussion section is often appropriate. Avoid extensive 
-%     citations and discussion of published literature.
+\section{Discussion}
+        This should explore the significance of the results of 
+    the work, not repeat them. A combined results and 
+    Discussion section is often appropriate. Avoid extensive 
+    citations and discussion of published literature.
 
-%         In our results we obtained $R_{0c}>1$ and  $R_{0h}<1$. This means that 
-%     for this outbreak, the presence of DHF cases, cannot trigger on its own new 
-%     DHF cases and in general, $R_{0h}<1$ would imply an exponential decay on 
-%     the number of infected individuals. However, the small DHF outbreak arises 
-%     despite the value of $R_{0h}$ as there is an increase in infected 
-%     mosquitoes of the serotype 2 due to the presence of the $S$ individuals, 
-%     which initially is close to $N_S$. Therefore, DHF dynamics is a consequence 
-%     of the intensity of the outbreak of DF, given by serotype 2. 
-% %
-%     \section{Conclusions}
-%         The main conclusions of the study may be presented in a 
-%     short Conclusions section, which may stand alone or form 
-%     a subsection of a Discussion or Results and Discussion 
-%     section.
+        In our results we obtained $R_{0c}>1$ and  $R_{0h}<1$. This means
+    that for this outbreak, the presence of DHF cases, cannot trigger
+    on its own new DHF cases and in general, $R_{0h}<1$ would imply an
+    exponential decay on the number of infected individuals. However,
+    the small DHF outbreak arises despite the value of $R_{0h}$ as
+    there is an increase in infected mosquitoes of the serotype 2 due
+    to the presence of the $S$ individuals, which initially is close
+    to $N_S$. Therefore, DHF dynamics is a consequence of the
+    intensity of the outbreak of DF, given by serotype 2. 
     
-%     In this work we have presented a mathematical model to understand the 2010 
-%     dengue outbreak that occurred in Hermosillo, Mexico. The model includes 
-%     infected classes of classic and hemorrhagic versions of dengue in order to 
-%     adjust the observed data. To our knowledge, there is no published work
-%     \bibliographystyle{elsarticle-harv}
-%     \bibliography{Epidemiology-TrabajoConDaniel}
+    
+    
+    \section{Conclusions}
+        The main conclusions of the study may be presented in a 
+    short Conclusions section, which may stand alone or form 
+    a subsection of a Discussion or Results and Discussion 
+    section.
+    
+        In this work we have presented a mathematical model to understand
+    the 2010 dengue outbreak that occurred in Hermosillo, Mexico. The
+    model includes infected classes of classic and hemorrhagic
+    versions of dengue in order to adjust the observed data. To our
+    knowledge, there is no published work
+    \bibliography{Epidemiology-TrabajoConDaniel}
 \end{document}
