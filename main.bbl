@@ -1,0 +1,155 @@
+\begin{thebibliography}{15}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Balmaseda et~al.(2006)Balmaseda, Hammond, Tellez, Imhoff, Rodriguez,
+  Sabor{\'\i}o, Mercado, Perez, Videa, Almanza, et~al.]{balmaseda2006high}
+A.~Balmaseda, S.~N. Hammond, Y.~Tellez, L.~Imhoff, Y.~Rodriguez, S.~I.
+  Sabor{\'\i}o, J.~C. Mercado, L.~Perez, E.~Videa, E.~Almanza, et~al.
+\newblock High seroprevalence of antibodies against dengue virus in a
+  prospective study of schoolchildren in managua, nicaragua.
+\newblock \emph{Tropical medicine \& international health}, 11\penalty0
+  (6):\penalty0 935--942, 2006.
+
+\bibitem[Chastel(2011)]{Chastel2011}
+C.~Chastel.
+\newblock Infections inapparentes chez l'homme : un cheval de troie pour
+  l'introduction et la diffusion des arbovirus transmis par des moustiques dans
+  les r{\'e}gions non end{\'e}miques ?
+\newblock \emph{Bulletin de la Soci{\'e}t{\'e} de pathologie exotique},
+  104\penalty0 (3):\penalty0 213, Jun 2011.
+\newblock ISSN 1961-9049.
+\newblock \doi{10.1007/s13149-011-0165-1}.
+\newblock URL \url{https://doi.org/10.1007/s13149-011-0165-1}.
+
+\bibitem[Chastel(2012)]{Chastel2012a}
+C.~Chastel.
+\newblock Eventual role of asymptomatic cases of dengue for the introduction
+  and spread of dengue viruses in non-endemic regions.
+\newblock \emph{Frontiers in Physiology}, 3:\penalty0 70, 2012.
+\newblock ISSN 1664-042X.
+\newblock \doi{10.3389/fphys.2012.00070}.
+\newblock URL
+  \url{https://www.frontiersin.org/article/10.3389/fphys.2012.00070}.
+
+\bibitem[Feng and Velasco-Hern{\'{a}}ndez(1997)]{Feng1997a}
+Z.~Feng and J.~X. Velasco-Hern{\'{a}}ndez.
+\newblock {Competitive exclusion in a vector-host model for the dengue fever}.
+\newblock \emph{Journal of Mathematical Biology}, 35\penalty0 (5):\penalty0
+  523--544, apr 1997.
+\newblock ISSN 0303-6812.
+\newblock \doi{10.1007/s002850050064}.
+\newblock URL \url{http://link.springer.com/10.1007/s002850050064}.
+
+\bibitem[G\'omez~Dant\'es et~al.(2014)G\'omez~Dant\'es, Farf\'an-Ale, and
+  Sarti]{Gomez2014}
+H.~G\'omez~Dant\'es, J.~A. Farf\'an-Ale, and E.~Sarti.
+\newblock {Epidemiological Trends of Dengue Disease in Mexico (2000–2011): A
+  Systematic Literature Search and Analysis}.
+\newblock \emph{PLoS Neglected Tropical Diseases}, 11\penalty0 (8):\penalty0
+  1--13 (e3158), 2014.
+
+\bibitem[Halstead(1992)]{Halstead1992}
+S.~Halstead.
+\newblock The xxth century dengue pandemic: need for surveillance and research.
+\newblock \emph{World health statistics quarterly. Rapport trimestriel de
+  statistiques sanitaires mondiales}, 45\penalty0 (2-3):\penalty0 292—298,
+  1992.
+\newblock ISSN 0379-8070.
+\newblock URL \url{http://europepmc.org/abstract/MED/1462664}.
+
+\bibitem[OhAinle et~al.(2011)OhAinle, Balmaseda, Macalalad, Tellez, C.,
+  Sabor\'io, Nuñez, Lennon, Birren, Gordon, Henn, and Harris]{OhAinle2011}
+M.~OhAinle, A.~Balmaseda, A.~R. Macalalad, Y.~Tellez, Z.~M. C., S.~Sabor\'io,
+  A.~Nuñez, N.~J. Lennon, B.~W. Birren, A.~Gordon, M.~R. Henn, and E.~Harris.
+\newblock {Dynamics of Dengue Disease Severity Determined by the Interplay
+  Between Viral Genetics and Serotype-Specific Immunity}.
+\newblock \emph{Sci Transl Med.}, 114\penalty0 (3):\penalty0 1 --29, 2011.
+\newblock \doi{10.1126/scitranslmed.3003084}.
+
+\bibitem[Pinho et~al.(2010)Pinho, Ferreira, Esteva, Barreto, Morato~e Silva,
+  and Teixeira]{Pinho2010}
+S.~T.~R. Pinho, C.~P. Ferreira, L.~Esteva, F.~R. Barreto, V.~C. Morato~e Silva,
+  and M.~G.~L. Teixeira.
+\newblock Modelling the dynamics of dengue real epidemics.
+\newblock \emph{Philosophical Transactions of the Royal Society of London A:
+  Mathematical, Physical and Engineering Sciences}, 368\penalty0
+  (1933):\penalty0 5679--5693, 2010.
+\newblock ISSN 1364-503X.
+\newblock \doi{10.1098/rsta.2010.0278}.
+\newblock URL
+  \url{http://rsta.royalsocietypublishing.org/content/368/1933/5679}.
+
+\bibitem[Reyes-Castro et~al.(2017)Reyes-Castro, Harris, Brown, Christopherson,
+  and Ernst]{Reyes2017}
+P.~A. Reyes-Castro, R.~B. Harris, H.~E. Brown, G.~L. Christopherson, and K.~C.
+  Ernst.
+\newblock Spatio-temporal and neighborhood characteristics of two
+  dengueoutbreaks in two arid cities of mexico.
+\newblock \emph{Acta Tropica}, \penalty0 (167):\penalty0 174--182, 2017.
+
+\bibitem[Sangkawibha et~al.(1984)Sangkawibha, Rojanasuphot, Sompop,
+  Viriyapongse, Jatanasen, Phanthumachinda, and Halstead]{Sangkawibha1984}
+N.~Sangkawibha, S.~Rojanasuphot, A.~Sompop, S.~Viriyapongse, V.~Jatanasen,
+  Sujarti abd~Salitul, B.~Phanthumachinda, and S.~B. Halstead.
+\newblock {Risk fators in dengue shock syndrome: A prospective epidemiologic
+  study in Rayong, Thailand: I. The 1980 Outbreak }.
+\newblock \emph{American Journal of Epidemiology}, 5\penalty0 (120):\penalty0
+  653--669, 1984.
+\newblock \doi{10.1093/oxfordjournals.aje.a113932}.
+
+\bibitem[Streatfield et~al.(1993)Streatfield, Bielby, and Sinclair]{Debast1993}
+R.~Streatfield, G.~Bielby, and D.~Sinclair.
+\newblock A primary dengue 2 epidemic with spontaneous haemorrhagic
+  manifestations.
+\newblock \emph{The Lancet}, 342\penalty0 (8870):\penalty0 560 -- 561, 1993.
+\newblock ISSN 0140-6736.
+\newblock \doi{https://doi.org/10.1016/0140-6736(93)91692-F}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/014067369391692F}.
+\newblock Originally published as Volume 2, Issue 8870.
+
+\bibitem[V\'azquez-Pichardo et~al.(2011)V\'azquez-Pichardo, Rosales-Jim\'enez,
+  N\'uñez-Le\'on, Rivera-Osorio, De~La Cruz-Hern\'andez, Ruiz-L\'opez,
+  Gonz\'alez-Mateos, L\'opez-Mart\'inez, Rodr\'iguez-Mart\'inez,
+  L\'opez-Gatell, and Alpuche-Aranda]{Vazquez2011}
+M.~V\'azquez-Pichardo, C.~Rosales-Jim\'enez, A.~N\'uñez-Le\'on,
+  P.~Rivera-Osorio, S.~De~La Cruz-Hern\'andez, A.~Ruiz-L\'opez,
+  S.~Gonz\'alez-Mateos, I.~L\'opez-Mart\'inez, J.~C. Rodr\'iguez-Mart\'inez,
+  H.~L\'opez-Gatell, and C.~Alpuche-Aranda.
+\newblock {Dengue serotypes in Mexico during 2009-2010}.
+\newblock \emph{Bol. Med. Hosp. Infant. Mex.}, 2\penalty0 (68):\penalty0
+  94--100, 2011.
+
+\bibitem[WHO(1997 (accessed May, 2018))]{WHO}
+WHO.
+\newblock Dengue haemorrhagic fever: diagnosis, treatment, prevention and
+  control. 2nd edition. geneva : World health organization.
+\newblock
+  \url{http://www.who.int/csr/resources/publications/dengue/Denguepublication/en/},
+  1997 (accessed May, 2018).
+
+\bibitem[YANG et~al.(2009)YANG, MACORIS, GALVANI, ANDRIGHETTI, and
+  WANDERLEY]{YANG2009}
+H.~M. YANG, M.~L.~G. MACORIS, K.~C. GALVANI, M.~T.~M. ANDRIGHETTI, and D.~M.~V.
+  WANDERLEY.
+\newblock {Assessing the effects of temperature on the population of Aedes
+  aegypti, the vector of dengue}.
+\newblock \emph{Epidemiology and Infection}, 137\penalty0 (08):\penalty0 1188,
+  aug 2009.
+\newblock ISSN 0950-2688.
+\newblock \doi{10.1017/S0950268809002040}.
+\newblock URL
+  \url{http://www.journals.cambridge.org/abstract{\_}S0950268809002040}.
+
+\bibitem[{Yasuno M}(1990)]{YasunoM1990}
+T.~R. {Yasuno M}.
+\newblock {A study of bitting habitats of Aedes aegypti in Bangkok, Thailand}.
+\newblock \emph{Bulletin of the World Health Organization}, 43\penalty0
+  (2):\penalty0 319--325, 1990.
+\newblock ISSN 0042-9686.
+
+\end{thebibliography}
