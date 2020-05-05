@@ -42,16 +42,19 @@
         Outbreak in Hermosillo Sonora.
     }    
     \author{%
-            {\sc S. D\'{\i}az-Infante%
-                \footnote{Corresponding author. 
-                    Present address: Departamento de Matem\'aticas, Universidad de Sonora
-                    Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, Sonora, C.P. 83000,
-                    M\'exico. Email: saul.diazinfante@unison.mx
+        {\sc S. D\'{\i}az-Infante%
+            \footnote{
+                Corresponding author. 
+                Present address: Departamento de Matem\'aticas,
+                Universidad de Sonora Blvd. Rosales y Luis Encinas S/N,
+                Col. Centro, Hermosillo, Sonora, C.P. 83000,
+                M\'exico. Email: saul.diazinfante@unison.mx
                 }
-            }\\[2pt]
+        }\\[2pt]
         CONACYT-Universidad de Sonora,
         Departamento de Matem\'aticas, Universidad de Sonora\\[6pt]
-        Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, Sonora, C.P. 83000,
+        Blvd. Rosales y Luis Encinas S/N, Col. Centro, Hermosillo, 
+        Sonora, C.P. 83000,
         M\'exico\\ 
         {\sc J. A. Montoya Laos 
             \footnote{Email: montoya@unison.mx}
@@ -72,7 +75,7 @@
         M\'exico\\ 
         {\rm [\today]}\vspace*{6pt}
     }
-    
+%
     \pagestyle{headings}
     \markboth{S. D\'{\i}az-Infante, J. A. Montoya Laos and D. Olmos Liceaga }{\rm 
         Modeling and $\mathcal{R}_0$ estimation of the 2010 Dengue Hemorrhagic Fever 
@@ -91,22 +94,7 @@
     \end{abstract}
 %
     \section{Introduction} \label{intro}
-        State the objectives of the work and provide an adequate 
-        background, avoiding a detailed literature survey or a 
-        summary of the results.
-%
-        \paragraph{Contribution}
-        Our objective is to explain the dengue hemorrhagic outbreak that 
-     occurred in the city of Hermosillo, located in the state of Sonora in 2010.
-    %
-    \paragraph{Severity}
-    \ac{DCF} 
-    \ac{DHF} description.
-    \paragraph{ADE hypothesis}
-     \ac{DENV-1}, \ac{DENV-2}
-     reinfection as cause of hemorrhagic.
-        \paragraph{Background}
-        
+        \input{introduction.tex}
     \section{Material and methods}
         \input{materials_and_methods.tex}
         \subsection*{Model}
@@ -127,21 +115,7 @@
         \input{discussion} 
     
     \section{Conclusions}
-        
-        The main conclusions of the study may be presented in a 
-    short Conclusions section, which may stand alone or form 
-    a subsection of a Discussion or Results and Discussion 
-    section.
-    
-	    In this work we have presented a mathematical model to understand the 2010 
-    dengue outbreak that occurred in Hermosillo, Mexico. The model includes 
-    infected classes of classic and hemorrhagic versions of dengue in order to 
-    adjust the observed data. To our knowledge, there is no published work
-        
-        In this work we have presented a mathematical model to understand
-    the 2010 dengue outbreak that occurred in Hermosillo, Mexico. The
-    model includes infected classes of classic and hemorrhagic
-    versions of dengue in order to adjust the observed data. To our
-    knowledge, there is no published work
+        \input{conclusions.tex}      
+  
     \bibliography{Epidemiology-TrabajoConDaniel}
 \end{document}

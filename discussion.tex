@@ -1,84 +1,84 @@
 %!TEX root = main.tex
-    \paragraph{Statement of principal findings}
-        We estimate that $R_{0c}>1$ and  $R_{0h}<1$. Thus DHF cases, 
-    cannot sustain new DHF cases. Furhter, $R_{0h}<1$ imply an
-    exponential decay on the number of infected individuals. However,
-    a small DHF outbreak arises despite the value of $R_{0h}$, we deduce
-    that this DHF dynamics is a consequence of the
-    intensity of the outbreak of DF, given by serotype 2.
+\paragraph{Statement of principal findings}
+    We estimate that $R_{0c}>1$ and  $R_{0h}<1$. Thus DHF cases, 
+cannot sustain new DHF cases. Furhter, $R_{0h}<1$ imply an
+exponential decay on the number of infected individuals. However,
+a small DHF outbreak arises despite the value of $R_{0h}$, we deduce
+that this DHF dynamics is a consequence of the
+intensity of the outbreak of DF, given by serotype 2.
 
-        We formulate a  model to describe the evolution of DCF and DHF
-    cases in Hermosillo for the 2010 outbreak and evaluate if ADE
-    hypotesis could explain the DHF dynamic. 
-    The central hypotheses of this manuscript were:
-        \begin{itemize}
-            \item
-                strain DENV-II circulated in the 2010 Hermosillo 
-            \item
-                Dengue outbreak antibody-Dependent Enhancement hypothesis
-                could explain the HDF high incidence 
-            \item
-                unconfirmed cases represent almost 95 \% of the total
-                incidence.
-        \end{itemize}
-        With these hypotheses, we obtain a model that describes
-    the incidence dynamics of HDF cases of the 2010 Hemosillo outbreak.
-    Our parameters estimation does not reject these hypothesis and provide
-    statistical evidence that the concerning reproductive number was \num{2.47}.
+    We formulate a  model to describe the evolution of DCF and DHF
+cases in Hermosillo for the 2010 outbreak and evaluate if ADE
+hypotesis could explain the DHF dynamic. 
+The central hypotheses of this manuscript were:
+    \begin{itemize}
+        \item
+            strain DENV-II circulated in the 2010 Hermosillo 
+        \item
+            Dengue outbreak antibody-Dependent Enhancement hypothesis
+            could explain the HDF high incidence 
+        \item
+            unconfirmed cases represent almost 95 \% of the total
+            incidence.
+    \end{itemize}
+    With these hypotheses, we obtain a model that describes
+the incidence dynamics of HDF cases of the 2010 Hemosillo outbreak.
+Our parameters estimation does not reject these hypothesis and provide
+statistical evidence that the concerning reproductive number was \num{2.47}.
+
+\paragraph{Strengths and weaknesses of the study}
+    We believe this is the first attempt to fit the exponential 
+growth of the incidence according to the Hemorragic Dengue Disease. 
+Further, the strucutre of our $\mathcal{R}_0$ calcuoation results be 
+the geometric mean of two expresion that are closed related 
+with the parameters transmition according to severity.  
+However, our formulation only considers an outbreak of one season.
+Thus classical asymptotic analysis has mathematical consistency
+but lacks biological meaning.  In this line, we are preparing a
+version that achieves both\textemdash proper data fitting and consistent
+asymptotic behavior. We believe that adding a class of immunity
+according to the particular strain would be an option.
+
+\paragraph{Strengths and weaknesses in relation 
+    to other studies}
     
-    \paragraph{Strengths and weaknesses of the study}
-        We believe this is the first attempt to fit the exponential 
-    growth of the incidence according to the Hemorragic Dengue Disease. 
-    Further, the strucutre of our $\mathcal{R}_0$ calcuoation results be 
-    the geometric mean of two expresion that are closed related 
-    with the parameters transmition according to severity.  
-    However, our formulation only considers an outbreak of one season.
-    Thus classical asymptotic analysis has mathematical consistency
-    but lacks biological meaning.  In this line, we are preparing a
-    version that achieves both\textemdash proper data fitting and consistent
-    asymptotic behavior. We believe that adding a class of immunity
-    according to the particular strain would be an option.
+    Our contribution describes scenarios wherein past Dengue outbreaks
+detected a dominant strain. Then decision-makers could project new
+dengue strain invasion scenarios.
 
-    \paragraph{Strengths and weaknesses in relation 
-        to other studies}
-        
-        Our contribution describes scenarios wherein past Dengue outbreaks
-    detected a dominant strain. Then decision-makers could project new
-    dengue strain invasion scenarios.
+    The cause of HDF is still unclear; for example, in [6] reports that
+the concentration of the virus explains the severity of Dengue. In
+this direction, Gomez et al. report a model that considers a severity
+stratification according to the mosquito load virulence.
 
-        The cause of HDF is still unclear; for example, in [6] reports that
-    the concentration of the virus explains the severity of Dengue. In
-    this direction, Gomez et al. report a model that considers a severity
-    stratification according to the mosquito load virulence.
+    In short, we believe that early serotype identification in any Dengue
+outbreak would be essential infromation to make epidemiological decisions.
+%
+\paragraph{Strengths and weaknesses of the study} 
+    Our $\mathcal{R}_0$ estimation is consistent with other outbreak reports [*].
+To the best of our knowledge, this is the first attempt to fit the 
+two exponential growth curves of the incidence according to Dengue 
+Disease severity. However, our formulation only considers an outbreak
+of one season. Thus classical asymptotic analysis has mathematical 
+consistency but lacks biological meaning.  In this line, we are preparing
+a version that achieves both\textemdash proper data fitting and consistent
+asymptotic behavior. We believe that adding a class of immunity according
+to the particular strain would be an option.
 
-        In short, we believe that early serotype identification in any Dengue
-    outbreak would be essential infromation to make epidemiological decisions.
-    %
-    \paragraph{Strengths and weaknesses of the study} 
-        Our $\mathcal{R}_0$ estimation is consistent with other outbreak reports [*].
-    To the best of our knowledge, this is the first attempt to fit the 
-    two exponential growth curves of the incidence according to Dengue 
-    Disease severity. However, our formulation only considers an outbreak
-    of one season. Thus classical asymptotic analysis has mathematical 
-    consistency but lacks biological meaning.  In this line, we are preparing
-    a version that achieves both\textemdash proper data fitting and consistent
-    asymptotic behavior. We believe that adding a class of immunity according
-    to the particular strain would be an option.
+     We take ideas from Zheng2018, Nuraini2007, Feng1997a] to modulate 
+the propensity of acquire Dengue due to a given serotype, 
+our model describe DHF transmission with a certain probability.  
+Thus, combining this idea with the hypothesis of unreported 
+incidence [Li2013b,4,5], we achieve proper
+data fitting. 
 
-         We take ideas from Zheng2018, Nuraini2007, Feng1997a] to modulate 
-    the propensity of acquire Dengue due to a given serotype, 
-    our model describe DHF transmission with a certain probability.  
-    Thus, combining this idea with the hypothesis of unreported 
-    incidence [Li2013b,4,5], we achieve proper
-    data fitting. 
+    The cause of DHF is still unclear; for example, in ESTEVA2015a reports
+that the concentration of the virus explains the severity of Dengue.
+In this direction, Gomez et al. provide a model that considers a
+severity stratification according to the mosquito load virulence.
 
-        The cause of DHF is still unclear; for example, in ESTEVA2015a reports
-    that the concentration of the virus explains the severity of Dengue.
-    In this direction, Gomez et al. provide a model that considers a
-    severity stratification according to the mosquito load virulence.
-
-        Our contribution describes scenarios wherein past Dengue
-    outbreaks detected a dominant  strain. Then decision-makers could
-    project new dengue strain invasion scenarios. Thus, we believe that early 
-    serotype identification in any Dengue outbreak would be essential to  
-    make epidemiological decisions.
+    Our contribution describes scenarios wherein past Dengue
+outbreaks detected a dominant  strain. Then decision-makers could
+project new dengue strain invasion scenarios. Thus, we believe that early 
+serotype identification in any Dengue outbreak would be essential to  
+make epidemiological decisions.
