@@ -1,46 +1,33 @@
 %!TEX root = ./main.tex
 \section*{Important Hypothesis (Daniel-Saúl)}
     \paragraph{Permanent immunity}
-    Accordingly to \cite{WHO}, infection of Dengue caused by a serotype DEN-i
-    induces long-life immunity to reinfection with this strain. Then, we
-    assume in our formulation that a susceptible individual previously
-    infected with Dengue of serotype DEN-i only could acquire Dengue of a 
-    different serotype.  We also suppose that a susceptible individual who 
-    never get infected before, could obtain Dengue by any of serotypes 
-    DENV-1, or DENV-2, but only for a single time and during the outbreak 
-    period.
-%
+    Accordingly to \cite{WHO}, Dengue infection caused by a DEN-i serotype induces long-life immunity to reinfection for this strain. Also,  a recovered individual previously infected with DEN-i Dengue serotype, acquires partial immunity to a different serotype for about a period of two years \cite{Reich2013}. As our study focuses on a single year dynamics, we assume that a susceptible individual who has never get infected before, could obtain Dengue by any of serotypes DENV-1, or DENV-2, and then becoming recovered to any strain for the rest of the year. 
+    
+    %
     \paragraph{ADE hypothesis}
-    The processes and factors that produce \ac{DHF} are still unclear. There is 
-    evidence that reinfection with a different serotype enhances the probability 
-    of developing plasma vascular permeability\textemdash the \ac{ADE} hypothesis 
-    \citep[see, e.g.][p. 295]{Halstead1992}. 
-    But there also exist studies that report first infection DHF cases 
-    \cite{Debast1993}. We consider in our formulation the ADE hypothesis, that 
-    is, only a fraction of the second reinfection with serotype \ac{DENV-2} 
-    develops vascular leaking.
+    The processes and factors that produce \ac{DHF} are still unclear. Different factors have
+    been observed to be responsible for DHF \cite{Martina2009}. However, one of the most predominant hypothesis claims that reinfection with a different serotype enhances the probability of developing plasma vascular permeability---the \ac{ADE} hypothesis \citep[see, e.g.][p. 295]{Halstead1992}, \cite{Guzman2013}. We consider in our formulation the ADE hypothesis, that 
+    is, only a fraction of the second reinfection with serotype \ac{DENV-2} develops vascular leaking. Additionally, a second consequence of the ADE hyphotesis, is that the susceptibility of acquiring dengue a second time, is increased \cite{Recker2009}. \\
+    %But there also exist studies that report first infection DHF cases \cite{Debast1993}.
 %
     \paragraph{\ac{DENV-2} report circulation in Hermosillo}
-        
-        According to \cite{Vazquez2011} and \cite{Reyes2017}, in year 2010 only DENV-1 
-        was present in the state of Sonora. Based on this information 
-        it is not clear that reinfection with a second 
-        strain in 2010 is the main cause of DHF. 
-        However, contrary to these studies, one of the main 
-        hypothesis in this work is that DENV-2 was present in Sonora in 2010. 
-        Our hypothesis is based on previous experiences, just as mentioned in 
-        \cite{Gomez2014}. In this work, where the authors analyze the dengue situation in Mexico for the period 2000 to 2011, argue that the increase of DHF in 2001 in 
-        Yucatan was linked to the introduction of the DENV-2 strain. 
-        Therefore, part of our hypothesis is that in 2010 there was an 
-        introduction of the DENV-2 into the Sonora state. 
-
-    \paragraph{Asymptomatic and reported cases}
+    According to \cite{Vazquez2011} and \cite{Reyes2017}, in year 2010 only DENV-1 was confirmed to be present in the state of Sonora. In contrast, even there is currently presence of DENV-2 in the state, due to limited serotyping of cases it is not clear when DENV-2 began circulating the state \cite{Reyes2017}. In order to argue that reinfection with DENV-2 might have been responsible for DHF, we follow previous studies, such as the work by \cite{Gomez2014} and \cite{Vazquez2011}. In \cite{Gomez2014}, the authors analyze the dengue situation in Mexico for the period 2000 to 2011, and argue that the increase of DHF in 2001 in Yucat\'an was linked to the introduction of the DENV-2 strain. 
+    On the other hand DENV-2 was reported to be present in Sinaloa and Baja California Sur in 2009 \cite{Vazquez2011}, which are neighbor states of Sonora. These studies support our hypothesis that DHF in 2010 in Hermosillo, was due to the introduction of DENV-2 into the state of Sonora. 
+    
+    
+    \paragraph{Asymptomatic and reported cases} According to \cite{Bosch2018} and \cite{Reiter2010}, the proportion of asymptomatic cases range the $75\%$ to the $80\%$. It has been demonstrated that asymptomatic individuals are able to transmit the disease with an $80\%$ of effectiveness, compared to symptomatic cases \cite{Bosch2018}. Therefore,
+ our model, makes no distinction between symptomatic and asymptomatic for the disease dynamics. On the other hand, reported cases represent only a fraction of the infected individuals obtained by the model. Then, our data is compared to a fraction of individuals that belong to the first and second time infected classes.
+ 
 
 
-    We assume that the $95\%$ (pendiente) of the \ac{DCF} are asymptomatic, whereas for 
-    \ac{DHF}  all the cases are reported. Therefore, the class $Y_{-1}^{[h]}$ accounts for
+
+    We assume that the $X\%$ (pending) of the \ac{DCF} are asymptomatic, whereas for 
+    \ac{DHF}  all the cases are reported. 
+    
+    
+    Therefore, the class $Y_{-1}^{[h]}$ accounts for
     all the \ac{DHF} cases, whereas a fraction $p=0.05$ of the sum 
-    $I_1+ I_2 + Y_{-1}^{[c]}$ represent the confirmed cases of \ac{DCF}.
+    $I_1+ I_2 + Y_{-1}^{[c]}$ represent the confirmed cases of \ac{DCF}. (75\% is the amount of asymptomatic according to literature)
 
     \tinytodo{Incluir citas de los 
         porcentages de asintomáticos,
