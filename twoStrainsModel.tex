@@ -11,16 +11,21 @@
     %But there also exist studies that report first infection DHF cases \cite{Debast1993}.
 %
     \paragraph{\ac{DENV-2} report circulation in Hermosillo}
-
-
-
-    We assume that the $X\%$ (pending) of the \ac{DCF} are asymptomatic, whereas for 
-    \ac{DHF}  all the cases are reported. 
+    According to \cite{Vazquez2011} and \cite{Reyes2017}, in year 2010 only DENV-1 was confirmed to be present in the state of Sonora. In contrast, even there is currently presence of DENV-2 in the state, due to limited serotyping of cases it is not clear when DENV-2 began circulating the state \cite{Reyes2017}. In order to argue that reinfection with DENV-2 might have been responsible for DHF, we follow previous studies, such as the work by \cite{Gomez2014} and \cite{Vazquez2011}. In \cite{Gomez2014}, the authors analyze the dengue situation in Mexico for the period 2000 to 2011, and argue that the increase of DHF in 2001 in Yucat\'an was linked to the introduction of the DENV-2 strain. 
+    On the other hand DENV-2 was reported to be present in Sinaloa and Baja California Sur in 2009 \cite{Vazquez2011}, which are neighbor states of Sonora. These studies support our hypothesis that DHF in 2010 in Hermosillo, was due to the introduction of DENV-2 into the state of Sonora. 
+    
+    \paragraph{Asymptomatic and reported cases} In order to estimate the solution that best fit the 
+    evolution of the number of reported cases, we utilize a fraction $p$ of the individuals that our model identifies as DCF cases. Such fraction is based on two factors (i) The proportion of asymptomatic cases respect to the total infected individuals, which ranges from the $75\%$ to the $80\%$ (\cite{Bosch2018}, \cite{Reiter2010}) and (ii) from the symptomatic cases, only a fraction of them
+     go to the hospital, and the test for DEN-V is taken. 
+    
+%    On the other hand, reported cases represent only a fraction of the infected individuals obtained by the model. Then, our data is compared to a fraction of individuals that belong to the first and second time infected classes.
+%    We assume that the $X\%$ (pending) of the \ac{DCF} are asymptomatic, whereas for 
+%    \ac{DHF}  all the cases are reported. 
     
     
-    Therefore, the class $Y_{-1}^{[h]}$ accounts for
-    all the \ac{DHF} cases, whereas a fraction $p=0.05$ of the sum 
-    $I_1+ I_2 + Y_{-1}^{[c]}$ represent the confirmed cases of \ac{DCF}. (75\% is the amount of asymptomatic according to literature)
+%    Therefore, the class $Y_{-1}^{[h]}$ accounts for
+%    all the \ac{DHF} cases, whereas a fraction $p=0.05$ of the sum 
+%    $I_1+ I_2 + Y_{-1}^{[c]}$ represent the confirmed cases of \ac{DCF}. (75\% is the amount of asymptomatic according to literature)
 
     \tinytodo{Incluir citas de los 
         porcentages de asintomáticos,
@@ -31,9 +36,13 @@
         75$\%$ is asymptomatic}
 
     \todo{chastel2012.pdf}
+    
     \paragraph{Homogeneity about the early outbreak stage}
+In this model    
+    
 
-    Define the infection forces as
+    \paragraph{Vector transmission dynamics}
+        Define the infection forces as
     \begin{equation}
         \begin{aligned}
             A_{I_1} &=
@@ -52,7 +61,7 @@
                 \frac{\beta_Hb}{N_H}M_2 ~.
         \end{aligned}
     \end{equation}
-    \paragraph{Vector transmission dynamics}
+
     Define
     $$
         A_{\bullet}:=
@@ -62,6 +71,7 @@
     as the total human infection force, that is, 
     the sum of all
     human contributions to the vector infection. 
+
     Then we describe the mosquito disease dynamics 
     by 
     \begin{equation}
@@ -85,24 +95,38 @@
     Here $M_S$, is the vector susceptible class and
     $M_1$, $M_2$ respectively denotes the vector 
     Infected classes with \ac{DENV-1}
-    and \ac{DENV-2}.
+    and \ac{DENV-2}. 
+    
+    
+    
     \paragraph{Host disease dynamics}
         Susceptible individuals ($S$) become infected for the first time
-        with DENV-1 or DENV-2 after  a successful mosquito bite and move
-        to classes $I_1$ and $I_2$, respectively. From here, they remain
+        with DENV-1 or DENV-2 after a successful mosquito bite and move
+        to classes $I_1$ and $I_2$, respectively. Individuals in these classes can 
+        be symptomatic or asymptomatic. From \cite{Bosch2018}, we know that asymptomatic 
+        individuals are able to transmit the disease with an $80\%$ of effectiveness, compared 
+        to symptomatic cases. Therefore, our model, makes no distinction between symptomatic and asymptomatic individuals for the disease dynamics.  
+        After $\alpha_c^{-1}$ time units,. infected individualsFrom here, they remain
         in the infected class for $1/\alpha_c$ time units, after which,
-        move to a recovered class $R_S$.  As we are interested in a one
+        move to a recovered class $R_S$.  
+        As we are interested in a one
         year dynamics, for the rest of the epidemic they become immune to
         any serotype. A second class of susceptible individuals $S_{-1}$,
         consist on those who acquired DENV-1 in previous years and in the
         current year are susceptible only to DENV-2. Such individuals
         become infected with DENV-2 when exposed to infected mosquitoes
-        with that serotype. In \cite{OhAinle2011} and
+        with that serotype. It is worth mentioning that asymptomatic individuals are 
+        able to transmit the disease with an $80\%$ of effectiveness, compared 
+        to symptomatic cases \cite{Bosch2018}. Therefore, our model, makes no 
+        distinction between symptomatic and asymptomatic individuals for the disease dynamics. 
+    
+        
+        In \cite{OhAinle2011} and
         \cite{Sangkawibha1984} it was observed that a more severe version
         of dengue occurs (might occur?) when an individual acquires dengue
         for a second time, and this happens to be DENV-2. Based on this
         assumption, an individual from $S_{-1}$ moves to $Y_{-1}^{[c]}$ or
-        $Y_{-1}^{[h]}$, if the infection leads to DF or DHF, respectively.
+        $Y_{-1}^{[h]}$, if the infection leads to DCF or DHF, respectively.
         Finally, these infected individuals move to the recovered class
         $R_{S_{-1}}$ at rates $\alpha_c$ and $\alpha_h$, respectively. For
         our model, $\mu_H$ is the human death rate; $b$ is the number of
@@ -161,7 +185,7 @@
         \\
         \frac{dR_{S_{-1}}}{dt} &= 
             \alpha_c Y_{-1} ^{[c]}
-            + \alpha_h Y_{-1} ^ {[h]} - \mu_H R \ .
+            + \alpha_h Y_{-1} ^ {[h]} - \mu_H R
     \end{aligned}
 \end{equation}
     Here, we take $N_H=N_S+N_{S_{-1}}$ as the total number of individuals.
