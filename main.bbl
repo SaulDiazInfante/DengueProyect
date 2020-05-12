@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -35,17 +35,6 @@ C.~Chastel.
 \newblock URL
   \url{https://www.frontiersin.org/article/10.3389/fphys.2012.00070}.
 
-\bibitem[ESTEVA and YANG(2015)]{ESTEVA2015}
-L.~ESTEVA and H.~M. YANG.
-\newblock {ASSESSING THE EFFECTS OF TEMPERATURE AND DENGUE VIRUS LOAD ON DENGUE
-  TRANSMISSION}.
-\newblock \emph{Journal of Biological Systems}, 23\penalty0 (04):\penalty0
-  1550027, dec 2015.
-\newblock ISSN 0218-3390.
-\newblock \doi{10.1142/S0218339015500278}.
-\newblock URL
-  \url{http://www.worldscientific.com/doi/abs/10.1142/S0218339015500278}.
-
 \bibitem[Feng and Velasco-Hern{\'{a}}ndez(1997)]{Feng1997a}
 Z.~Feng and J.~X. Velasco-Hern{\'{a}}ndez.
 \newblock {Competitive exclusion in a vector-host model for the dengue fever}.
@@ -55,12 +44,43 @@ Z.~Feng and J.~X. Velasco-Hern{\'{a}}ndez.
 \newblock \doi{10.1007/s002850050064}.
 \newblock URL \url{http://link.springer.com/10.1007/s002850050064}.
 
-\bibitem[Guzman and Halstead(2013)]{Guzman2013}
-A.~M. Guzman, Maria~G. and S.~B. Halstead.
+\bibitem[Garba and Gumel(2010)]{Garba2010}
+S.~M. Garba and A.~B. Gumel.
+\newblock {Effect of cross-immunity on the transmission dynamics of two strains
+  of dengue}.
+\newblock \emph{International Journal of Computer Mathematics}, 87\penalty0
+  (10):\penalty0 2361–2384, 2010.
+\newblock \doi{10.1080/00207160802660608}.
+\newblock URL \url{https://doi.org/10.1080/00207160802660608}.
+
+\bibitem[G\'omez~Dant\'es et~al.(2014)G\'omez~Dant\'es, Farf\'an-Ale, and
+  Sarti]{Gomez2014}
+H.~G\'omez~Dant\'es, J.~A. Farf\'an-Ale, and E.~Sarti.
+\newblock {Epidemiological Trends of Dengue Disease in Mexico (2000–2011): A
+  Systematic Literature Search and Analysis}.
+\newblock \emph{PLoS Neglected Tropical Diseases}, 11\penalty0 (8):\penalty0
+  1--13 (e3158), 2014.
+
+\bibitem[Guzman et~al.(2013)Guzman, Alvarez, and Halstead]{Guzman2013}
+M.~G. Guzman, M.~Alvarez, and S.~B. Halstead.
 \newblock {Secondary infection as a risk factor for dengue hemorrhagic
-  fever/dengue shock syndrome: an historical perspective and roleof
+  fever/dengue shock syndrome: an historical perspective and role of
   antibody-dependent enhancement of infection}.
-\newblock \emph{Arch. Virol.}, 158:\penalty0 1445--1459, 2013.
+\newblock \emph{Archives of Virology}, 158\penalty0 (7):\penalty0 1445--1459,
+  jul 2013.
+\newblock ISSN 0304-8608.
+\newblock \doi{10.1007/s00705-013-1645-3}.
+\newblock URL \url{http://link.springer.com/10.1007/s00705-013-1645-3}.
+
+\bibitem[Guzmán and Kouri(2002)]{Guzman2002}
+M.~G. Guzmán and G.~Kouri.
+\newblock {Dengue: an update}.
+\newblock \emph{The Lancet Infectious Diseases}, 2\penalty0 (1):\penalty0
+  33–42, 2002.
+\newblock ISSN 1473-3099.
+\newblock \doi{10.1016/S1473-3099(01)00171-2}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S1473309901001712}.
 
 \bibitem[Halstead(1992)]{Halstead1992}
 S.~Halstead.
@@ -70,6 +90,17 @@ S.~Halstead.
   1992.
 \newblock ISSN 0379-8070.
 \newblock URL \url{http://europepmc.org/abstract/MED/1462664}.
+
+\bibitem[Khan et~al.(2014)Khan, Hassan, and Imran]{Khan2014}
+A.~Khan, M.~Hassan, and M.~Imran.
+\newblock {Estimating the basic reproduction number for single-strain dengue
+  fever epidemics}.
+\newblock \emph{Infectious Diseases of Poverty}, 3\penalty0 (1):\penalty0 12,
+  2014.
+\newblock ISSN 2049-9957.
+\newblock \doi{10.1186/2049-9957-3-12}.
+\newblock URL
+  \url{http://idpjournal.biomedcentral.com/articles/10.1186/2049-9957-3-12}.
 
 \bibitem[Martina et~al.(2009)Martina, Koraka, and Osterhaus]{Martina2009}
 B.~E.~E. Martina, P.~Koraka, and A.~D. M.~E. Osterhaus.
@@ -124,6 +155,19 @@ N.~G. Reich, S.~Shrestha, A.~A. King, P.~Rohani, J.~Lessler, S.~Kalayanarooj,
 \newblock \emph{J. R. Soc. Interface}, \penalty0 (10):\penalty0 20130414
   (1--9), 2013.
 
+\bibitem[Reiter(2010)]{Reiter2010}
+P.~Reiter.
+\newblock {Yellow fever and dengue: a threat to Europe?}
+\newblock \emph{Euro Surveill}, 15\penalty0 (10):\penalty0 19509 (1--7), 2010.
+
+\bibitem[Reyes-Castro et~al.(2017)Reyes-Castro, Harris, Brown, Christopherson,
+  and Ernst]{Reyes2017}
+P.~A. Reyes-Castro, R.~B. Harris, H.~E. Brown, G.~L. Christopherson, and K.~C.
+  Ernst.
+\newblock Spatio-temporal and neighborhood characteristics of two
+  dengueoutbreaks in two arid cities of mexico.
+\newblock \emph{Acta Tropica}, \penalty0 (167):\penalty0 174--182, 2017.
+
 \bibitem[Sangkawibha et~al.(1984)Sangkawibha, Rojanasuphot, Sompop,
   Viriyapongse, Jatanasen, Phanthumachinda, and Halstead]{Sangkawibha1984}
 N.~Sangkawibha, S.~Rojanasuphot, A.~Sompop, S.~Viriyapongse, V.~Jatanasen,
@@ -133,6 +177,39 @@ N.~Sangkawibha, S.~Rojanasuphot, A.~Sompop, S.~Viriyapongse, V.~Jatanasen,
 \newblock \emph{American Journal of Epidemiology}, 5\penalty0 (120):\penalty0
   653--669, 1984.
 \newblock \doi{10.1093/oxfordjournals.aje.a113932}.
+
+\bibitem[Streatfield et~al.(1993)Streatfield, Bielby, and Sinclair]{Debast1993}
+R.~Streatfield, G.~Bielby, and D.~Sinclair.
+\newblock A primary dengue 2 epidemic with spontaneous haemorrhagic
+  manifestations.
+\newblock \emph{The Lancet}, 342\penalty0 (8870):\penalty0 560 -- 561, 1993.
+\newblock ISSN 0140-6736.
+\newblock \doi{https://doi.org/10.1016/0140-6736(93)91692-F}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/014067369391692F}.
+\newblock Originally published as Volume 2, Issue 8870.
+
+\bibitem[ten Bosch et~al.(2018)ten Bosch, Clapham, Lambrechts, Veasna, Buchy,
+  Althouse, Lloyd, Waller, Morrison, Kitron, Vazquez-Prokopec, and
+  Perkins]{Bosch2018}
+Q.~A. ten Bosch, H.~E. Clapham, L.~Lambrechts, D.~Veasna, P.~Buchy, B.~M.
+  Althouse, A.~L. Lloyd, L.~A. Waller, A.~C. Morrison, U.~Kitron, S.~T.~W.
+  Vazquez-Prokopec, Gonzalo~M., and A.~Perkins.
+\newblock {Contributions from the silent majority dominate dengue virus
+  transmission }.
+\newblock \emph{PLoS Pathog}, 14\penalty0 (5):\penalty0 e1006965 (1--20), 2018.
+
+\bibitem[V\'azquez-Pichardo et~al.(2011)V\'azquez-Pichardo, Rosales-Jim\'enez,
+  N\'uñez-Le\'on, Rivera-Osorio, De~La Cruz-Hern\'andez, Ruiz-L\'opez,
+  Gonz\'alez-Mateos, L\'opez-Mart\'inez, Rodr\'iguez-Mart\'inez,
+  L\'opez-Gatell, and Alpuche-Aranda]{Vazquez2011}
+M.~V\'azquez-Pichardo, C.~Rosales-Jim\'enez, A.~N\'uñez-Le\'on,
+  P.~Rivera-Osorio, S.~De~La Cruz-Hern\'andez, A.~Ruiz-L\'opez,
+  S.~Gonz\'alez-Mateos, I.~L\'opez-Mart\'inez, J.~C. Rodr\'iguez-Mart\'inez,
+  H.~L\'opez-Gatell, and C.~Alpuche-Aranda.
+\newblock {Dengue serotypes in Mexico during 2009-2010}.
+\newblock \emph{Bol. Med. Hosp. Infant. Mex.}, 2\penalty0 (68):\penalty0
+  94--100, 2011.
 
 \bibitem[WHO(1997 (accessed May, 2018))]{WHO}
 WHO.
@@ -155,11 +232,31 @@ H.~M. YANG, M.~L.~G. MACORIS, K.~C. GALVANI, M.~T.~M. ANDRIGHETTI, and D.~M.~V.
 \newblock URL
   \url{http://www.journals.cambridge.org/abstract{\_}S0950268809002040}.
 
+\bibitem[Yap et~al.(2013)Yap, Li, Mutalib, Lai, and Ng]{Li2013b}
+G.~Yap, C.~Li, A.~Mutalib, Y.-L. Lai, and L.-C. Ng.
+\newblock {High Rates of Inapparent Dengue in Older Adults in Singapore}.
+\newblock \emph{The American Journal of Tropical Medicine and Hygiene},
+  88\penalty0 (6):\penalty0 1065–1069, 2013.
+\newblock ISSN 0002-9637.
+\newblock \doi{10.4269/ajtmh.12-0150}.
+\newblock URL
+  \url{https://www.ajtmh.org/content/journals/10.4269/ajtmh.12-0150}.
+
 \bibitem[{Yasuno M}(1990)]{YasunoM1990}
 T.~R. {Yasuno M}.
 \newblock {A study of bitting habitats of Aedes aegypti in Bangkok, Thailand}.
 \newblock \emph{Bulletin of the World Health Organization}, 43\penalty0
   (2):\penalty0 319--325, 1990.
 \newblock ISSN 0042-9686.
+
+\bibitem[Zheng and Nie(2018)]{Zheng2018}
+T.-T. Zheng and L.-F. Nie.
+\newblock {Modelling the transmission dynamics of two-strain Dengue in the
+  presence awareness and vector control}.
+\newblock \emph{Journal of Theoretical Biology}, 443:\penalty0 82–91, 2018.
+\newblock ISSN 0022-5193.
+\newblock \doi{10.1016/j.jtbi.2018.01.017}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0022519318300316}.
 
 \end{thebibliography}

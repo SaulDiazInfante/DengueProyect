@@ -1,14 +1,19 @@
 \documentclass[tikz]{standalone}
 \usepackage{pgf}
 \usepackage{tikz}
-\usetikzlibrary{arrows,automata}
+\usetikzlibrary{arrows, automata}
 \usepackage[utf8]{inputenc}
 \usepackage{verbatim}
+\tikzset{external/system call={latex \tikzexternalcheckshellescape -halt-on-error
+-interaction=batchmode -jobname "\image" "\texsource" && 
+dvips -o "\image".ps "\image".dvi &&
+ps2eps "\image.ps"}}
+\tikzexternalize[shell escape=-enable-write18]
 \begin{document}
 %
   \tikzstyle{stateM}=[draw, draw=orange!60,fill=orange!40, minimum size=3em]
   \tikzstyle{state}=[draw, draw=blue!60,fill=blue!20, minimum size=3em]
-  \tikzstyle{state_m1}=[draw, draw=bluee!60,fill=blue!20, minimum size=3em]
+  \tikzstyle{state_m1}=[draw, draw=blue!60,fill=blue!20, minimum size=3em]
   \tikzstyle{state_m1h}=[draw, draw=red!60,fill=red!40, minimum size=3em]
   \tikzstyle{init} = [pin edge={to-,thin,black}]
   \tikzstyle{label_s} = [inner sep=2pt, align=left, sloped]
@@ -29,23 +34,22 @@
     \node (S_in) at (-1.5, -1) [coordinate]{Ls};
     \node (S_out) at (1.75, 1) [coordinate]{muS};
     %
-    \node (I1) at (3, -1) [circle, state] {$I_1}$};
-    \node (I1_out) at (4.75, 1.0) [coordinate]{muI1};
+    \node (I1) at (3, -1) [circle, state] {$I_1$};
+    \node (I1_out) at (4.75, 1.0) [coordinate]{muI1};r
 
-    \node (I2) at (6, -1) [circle, state] {$I_2}$};
+    \node (I2) at (6, -1) [circle, state] {$I_2$};
     \node (I2_out) at (7.75, 1.0) [coordinate]{muI2};
     %
     \node (Sm1) at (0, -5) [circle, state_m1] {$S_{-1}$};
     \node (Sm1_in) at (-1.5, -5) [coordinate] {Lsm1};
     \node (Sm1_out) at (1.75, -3.0) [coordinate]{muS};
     %
-    \node (Ym1c) at (3, -5) [circle, state_m1] {$Y_{-1}}^{[c]}$};
+    \node (Ym1c) at (3, -5) [circle, state_m1] {$Y_{-1}^{[c]}$};
     \node (Ym1c_out) at (4.75, -3.0) [coordinate]{muYm1c};
     %
-    \node (Ym1h) at (6, -5) [circle, state_m1h] {$Y_{-1}^{[h]}}$};
+    \node (Ym1h) at (6, -5) [circle, state_m1h] {$Y_{-1}^{[h]}$};
     \node (Ym1h_out) at (7.75, -3.0) [coordinate]{muYm1h};
-
-
+    %
     % Vector cicle
     \path[->] (MS_in) edge node[near start, label_s, above] {$\Lambda_M$} (MS);
     \path[->] (MS) edge node[label_s, above] {$\mu_M M_s$} (MS_out);
@@ -55,7 +59,7 @@
     %
     \path[->] (MI1) edge node[label_s, above] {$\mu_M M_{1}$} (MI1_out);
     \path[->] (MI2) edge node[label_s, above] {$\mu_M M_{2}$} (MI2_out);
-
+    %
     % Human cicle
     \path[->] (S_in) edge node[near start, above] {$\Lambda_S$} (S);
     \path[->] (S) edge node[above]{$B_{M_1} S$} (I1);
