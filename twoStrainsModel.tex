@@ -20,8 +20,9 @@
     
 %    On the other hand, reported cases represent only a fraction of the infected individuals obtained by the model. Then, our data is compared to a fraction of individuals that belong to the first and second time infected classes.
 %    We assume that the $X\%$ (pending) of the \ac{DCF} are asymptomatic, whereas for 
-%   \ac{DHF}  all the cases are reported.     
-%    
+%    \ac{DHF}  all the cases are reported. 
+    
+    
 %    Therefore, the class $Y_{-1}^{[h]}$ accounts for
 %    all the \ac{DHF} cases, whereas a fraction $p=0.05$ of the sum 
 %    $I_1+ I_2 + Y_{-1}^{[c]}$ represent the confirmed cases of \ac{DCF}. (75\% is the amount of asymptomatic according to literature)
@@ -96,20 +97,29 @@ In this model
     Infected classes with \ac{DENV-1}
     and \ac{DENV-2}. 
     
+    
+    
     \paragraph{Host disease dynamics}
         Susceptible individuals ($S$) become infected for the first time
         with DENV-1 or DENV-2 after a successful mosquito bite and move
         to classes $I_1$ and $I_2$, respectively. Individuals in these classes can 
         be symptomatic or asymptomatic. From \cite{Bosch2018}, we know that asymptomatic 
         individuals are able to transmit the disease with an $80\%$ of effectiveness, compared 
-        to symptomatic cases. Therefore, our model, makes no distinction between symptomatic and asymptomatic individuals for the disease dynamics. 
-        After $\alpha_c^{-1}$ time units, infected individuals move to a recovered class $R_S$.  
-        As we are interested in a one year dynamics, for the rest of the epidemic they become immune to
+        to symptomatic cases. Therefore, our model, makes no distinction between symptomatic and asymptomatic individuals for the disease dynamics.  
+        After $\alpha_c^{-1}$ time units,. infected individualsFrom here, they remain
+        in the infected class for $1/\alpha_c$ time units, after which,
+        move to a recovered class $R_S$.  
+        As we are interested in a one
+        year dynamics, for the rest of the epidemic they become immune to
         any serotype. A second class of susceptible individuals $S_{-1}$,
         consist on those who acquired DENV-1 in previous years and in the
         current year are susceptible only to DENV-2. Such individuals
         become infected with DENV-2 when exposed to infected mosquitoes
-        with that serotype. 
+        with that serotype. It is worth mentioning that asymptomatic individuals are 
+        able to transmit the disease with an $80\%$ of effectiveness, compared 
+        to symptomatic cases \cite{Bosch2018}. Therefore, our model, makes no 
+        distinction between symptomatic and asymptomatic individuals for the disease dynamics. 
+    
         
         In \cite{OhAinle2011} and
         \cite{Sangkawibha1984} it was observed that a more severe version
@@ -314,7 +324,3 @@ the basic reproductive number
     for two serotypes).
     This follows from the idea that we are interested in classic and hemorrhagic
     cases rather than the predominance of a serotype.
-
-
-
-
