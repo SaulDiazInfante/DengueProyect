@@ -1,5 +1,5 @@
-\documentclass[draft, openbib]{article}
-%\jno{dqnxxx}
+\documentclass[11pt]{imammb}
+\jno{dqnxxx}
 \usepackage[english]{babel}
 \usepackage[pagebackref=true]{hyperref}
 \usepackage{doi}
@@ -29,14 +29,14 @@
 \setcitestyle{authoryear,open={(},close={)}}
 \newcommand{\tinytodo}[2][]
 {\todo[caption={#2}, size=\tiny, #1]{
-	\renewcommand{\baselinestretch}{0.5}\selectfont#2\par}
+    \renewcommand{\baselinestretch}{0.5}\selectfont#2\par}
 }
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
 \numberwithin{equation}{section}
 \def\citeasnoun{\cite}
 %
 \begin{document}
-	%
+    %
     \title{
         Modeling and $R_0$ estimation  of the 2010 Dengue Hemorrhagic Fever 
         Outbreak in Hermosillo Sonora.
@@ -121,5 +121,5 @@
     \section{Conclusions}
         \input{conclusions.tex}      
     %
-    \bibliography{Epidemiology-TrabajoConDaniel}
+    \bibliography{Epidemiology-TrabajoConDaniel}{}
 \end{document}
