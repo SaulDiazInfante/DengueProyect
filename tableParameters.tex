@@ -9,7 +9,7 @@
 		\\
 		\midrule
 			$M_S(0)$
-				& Initial number of 
+				& Initial number of
 		\\
 			$M_1(0)$,
 				& susceptible and infected
@@ -25,19 +25,19 @@
 			$b$
 			& Biting rate
 			&\cite{YasunoM1990}
-			&[10.36 , 33.39] & $\si{meals \per week}$ 
+			&[10.36 , 33.39] & $\si{meals \per week}$
 		\\
 %			$\Lambda_S$
 %				& Human birth rate
 %				&
-%				& 
+%				&
 %					$\mu_H \cdot (N_H - N_{S_{-1}})$
 %				& $\si{week^{-1}}$
 %		\\
 %			$\Lambda_{S_{-1}}$
 %				& Human birth rate
 %				&
-%				& 
+%				&
 %					$\mu_H \cdot N_{S_{-1}}$
 %				& $\si{week^{-1}}$
 %		\\
@@ -50,52 +50,52 @@
 			$\mu_M$
 			& vector mortality rate
 			& \cite{YANG2009}
-            & [\num{0.252}, \num{0.763}] 
+            & [\num{0.252}, \num{0.763}]
             & $\si{week^{-1}}$
     \\
 			$\mu_H$
 			& Human mortality
 			&---
-			& \num{0.000273973} 
+			& \num{0.000273973}
 			& $\si{week^{-1}}$
 		\\
-			$\beta_H$ 
-			&	Human infection 
+			$\beta_H$
+			&	Human infection
 			\\
       & probability  by vectors
-			& \cite{Feng1997a} 
-			& (\num{0}, \num{0.05}] 
+			& \cite{Feng1997a}
+			& (\num{0}, \num{0.05}]
 			& ---
 		\\
 			$\beta_M$
-			& Vector infection 
+			& Vector infection
 			\\
       & probability by humans
 			& \cite{Feng1997a}& (\num{0}, \num{0.05}] & ---
 		\\
-			$\alpha_{c}$ 
-			& Mean recover rate 
+			$\alpha_{c}$
+			& Mean recover rate
 			\\
       & from Classic Dengue
 			&\cite{Pinho2010}
 			& [\num{0.581}, \num{1.75}] & $\si{week^{-1}}$
 		\\
 			$\alpha_{h}$	& Mean recover rate
-			& \cite{Pinho2010} 
-			& [\num{0.581}, \num{1.75}] 
+			& \cite{Pinho2010}
+			& [\num{0.581}, \num{1.75}]
 			& $\si{week^{-1}}$
 		\\
 			& from Hemorrhagic Dengue
 		\\
 			$\sigma$
-			& Susceptibility to serotype 
+			& Susceptibility to serotype
 		\\
 			& \ac{DENV-2}.
 			& \cite{Feng1997a}
 			& $(0,5)$
       \\
-            $p$ 
-            & 
+            $p$
+            &
             Ratio of asymptomatic cases
             &
             \cite{balmaseda2006high},
@@ -107,9 +107,9 @@
             \cite{Chastel2011, Chastel2012a}
             \\
 			$\theta$
-			& Probability of 
+			& Probability of
 			\\
-			& acquire DHF 
+			& acquire DHF
 			\\
 			& as second infection
 			\\
@@ -127,17 +127,13 @@
 	\includegraphics[width=\textwidth, keepaspectratio]{fitting_DF_DHF.png}
 	\caption{DF and DHF numerical solutions versus
 		Dengue data from 2010 Hermosillo outbreak. Python code and
-    data in 
+    data in
     \href{github}{https://github.com/SaulDiazInfante/Two-strains-dengue-model-data-%
         fitting/tree/master/StochasticSearchPySimplifiedModel}
 	}\label{fig:fitting}
 \end{figure}
 
-<<<<<<< HEAD
-\begin{figure}[htb]
-=======
 \begin{figure}[h]
->>>>>>> 0f463030b7fe3786d8fc6fc84c6ae076b736d28f
 	\centering
 	\includegraphics[width=\textwidth, keepaspectratio]{populations_grid.png}
 	\caption{Evolutions of each stage.}\label{fig:population_grid}
