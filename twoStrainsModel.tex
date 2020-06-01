@@ -170,7 +170,7 @@ In this model
             B_{M_2} S
             -(\alpha_c + \mu_H)I_2
         \\
-        \frac{dR_S}{dt}&=\alpha_c I_2-\mu_H R_S
+        \frac{dR_S}{dt}&=\alpha_c (I_1+I_2)-\mu_H R_S
         \\
         \frac{dS_{-1}}{dt} &=
             \mu_HN_{S_{-1}}- \sigma B_{M_2} S_{-1}-\mu_H S_{-1}
@@ -287,10 +287,8 @@ the basic reproductive number
 %
 \begin{equation}
     \begin{aligned}
-        \psi &:= \frac{\beta_MbN_M}{\mu_MN_H}
-        \\
         R_{0c} & := \sqrt{
-            \psi
+            \frac{\beta_MbN_M}{\mu_MN_H}
             \left(
                 \frac{\beta_HbN_S}{ (\alpha_c + \mu_H)N_H}
                 +
@@ -300,7 +298,7 @@ the basic reproductive number
         R_{0h}& :=\sqrt{
             \left(\frac{\beta_MbN_M}{\mu_MN_H}\right)
                 \left(\frac{
-                    \sigma \theta N_{S_{-1}}
+                    \beta_Hb \theta\sigma N_{S_{-1}}
                 }{(\alpha_h + \mu_H)N_H}\right)}
 %       \qquad
     \\
